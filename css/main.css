@@ -11,3 +11,39 @@
 
 @import url('./layout/navigation.css');
 
+@media (max-width: 767.98px){
+
+    .featured-container{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .more-btn{    
+        font-size: var(--fs-xs);
+        color: var(--clr-white); 
+        margin-top: 0.5rem;
+    }
+
+    .like-btn{
+        width: 20%;
+        border-radius: 0.5rem;
+    }
+
+    .recepie-img{     
+        height: 8.9375rem;
+        margin-top: 3rem;
+    }
+
+    .recepie-title{
+        font-size: var(--fs-sm);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .recepie-details-txt{
+        font-size: var(--fs-xs );
+        margin-top: 1.3rem; 
+        
+    }
+
+}
