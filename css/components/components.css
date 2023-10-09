@@ -23,7 +23,7 @@
 
 .recepie-main{
     border-bottom-left-radius: 2rem;
-    width: 100%;
+    width: 110%;
     display: flex;
 }
 
@@ -48,18 +48,18 @@
     width: 15%;
     border: none;
     background-color: var(--clr-white);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     border-radius: 0.5rem;
 }
-.add-btn{
+.more-btn{
+    font-style: italic;
     font-family: var(--ff-main);
     font-size: var(--fs-sm);
     color: var(--clr-white); 
     font-weight: var(--fw-regular);
     border: none;
     background-color: transparent;
-    margin-top: 1rem;
-    white-space: wrap;
+    margin-top: 0.5rem;
     width: 100%;
     
 }
