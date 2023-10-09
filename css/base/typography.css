@@ -34,6 +34,25 @@
     font-weight: var(--fw-regular);
     
 }
+.featured-title{
+    font-family: var(--ff-main);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.featured-details-txt{
+    font-family: var(--ff-main);
+    font-size: var(--fs-xs );
+    color: var(--clr-white);
+    text-align: center; 
+    margin-top: 1.3rem; 
+    font-weight: var(--fw-regular);
+    
+}
 
 .footer-text{
     font-family: var(--ff-main);
