@@ -40,3 +40,26 @@
     background-color: var(--clr-white);
     
 }
+
+.like-img{
+    width: 100%;
+}
+.like-btn{
+    width: 15%;
+    border: none;
+    background-color: var(--clr-white);
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+.add-btn{
+    font-family: var(--ff-main);
+    font-size: var(--fs-sm);
+    color: var(--clr-white); 
+    font-weight: var(--fw-regular);
+    border: none;
+    background-color: transparent;
+    margin-top: 1rem;
+    white-space: wrap;
+    width: 100%;
+    
+}
