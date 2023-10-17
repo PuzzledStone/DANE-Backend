@@ -1,0 +1,10 @@
+html{
+    font-size: 32px;
+}
+
+body{
+   background: var(--clr-white);
+   display: grid; 
+   margin: 0;
+   padding: 0;
+}

@@ -1,0 +1,93 @@
+.logo-nav{
+    scale: 25%;
+    left: -8rem;
+    position: absolute;
+    top: -2.5rem;
+}
+
+
+.log-nav{
+    scale: 125%;
+    position: absolute;
+    right: 5rem;
+    top: 1.1rem;
+}
+
+.register-nav{
+    scale: 135%;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+}
+
+.recepie-main{
+    border-bottom-left-radius: 2rem;
+    width: 110%;
+    display: flex;
+}
+
+.featured-img{
+    border-bottom-left-radius: 2rem;
+    width: 110%;
+    height: 8.9375rem;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.red-box{
+   background-color: var(--clr-red);
+   border-top-right-radius: 2rem;
+   border-bottom-right-radius: 2rem; 
+}
+
+.white-line{
+    display: flex;
+    border-radius: 5rem;
+    padding: 2px;
+    background-color: var(--clr-white);
+    
+}
+
+.like-img{
+    width: 100%;
+    margin-bottom: -4px;
+}
+.like-btn{
+    width: 15%;
+    border: none;
+    background-color: var(--clr-white);
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.featured-like-btn{
+    width: 20%;
+    border: none;
+    background-color: var(--clr-white);
+    border-radius: 0.5rem;
+}
+.more-btn{
+    font-style: italic;
+    font-family: var(--ff-main);
+    font-size: var(--fs-sm);
+    color: var(--clr-white); 
+    font-weight: var(--fw-regular);
+    border: none;
+    background-color: transparent;
+    margin-top: 0.5rem;
+    width: 100%;
+    
+}
+
+.featured-more-btn{
+    font-style: italic;
+    font-family: var(--ff-main);
+    font-size: var(--fs-xs);
+    color: var(--clr-white); 
+    font-weight: var(--fw-regular);
+    border: none;
+    background-color: transparent;
+    margin-top: 0.5rem;
+    width: 100%;
+}

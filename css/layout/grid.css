@@ -1,0 +1,112 @@
+.cta-container{
+    background: url(../../imgs/resources/main-img.png);
+    display: grid;
+    background-position: center; 
+    background-size: cover;
+    height: 19rem;
+    width: 100%;
+    opacity: 80%;
+}
+/* se crea un container para el titulo de la comida y la imagen que corrresponde.*/
+.det-container {
+    display: absolute;
+    width: 100%;
+    /*background: hsl(113, 52%, 32%);*/
+}
+.det-second-container {
+    display: absolute;
+    width: 100%;
+    /*background: hsl(0, 76%, 45%);*/
+   
+}
+.img-details {
+    background-position: center;
+    margin-left: 400px;
+    display: flex;
+
+}
+.title-container {
+ /* background-color: #861515c0;*/
+    position: relative;
+    width: 10%;
+    margin-left: 600px;
+    
+}
+.second-container {
+    /* background-color: #861515c0;*/
+       position: relative;
+       width: 10%;
+       margin-left: 100px;
+       display: grid;
+   }
+
+   .vote-item {
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+.left {
+    width: 10%;
+    display: grid;
+    margin-right: 10px; /* Ajusta el espacio entre .left y .right */
+}
+
+.right {
+    margin-top: 30px;
+}
+
+.line {
+    border-top: 3px solid hsl(0, 88%, 58%);
+    margin: 15px auto 0 auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 200px;
+    display: grid;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+  
+}
+th {
+    background-color:hsl(0, 88%, 58%);
+}
+.text-details{
+    
+margin-left:100px;
+}
+/*------------------------------------------------------------------------------*/
+.most-voting-container{
+    text-align: center;
+}
+.voted-recipes-container{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+    margin:2rem auto;
+    gap: 2rem;
+    width: 85vw;
+}
+
+.recepie{
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 3px solid var(--clr-black) ;
+}
+
+.featured-container{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    margin:2rem auto;
+    gap: 2rem;
+    width: 85vw;
+}
+
+

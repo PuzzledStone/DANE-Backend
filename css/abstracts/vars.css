@@ -1,0 +1,24 @@
+/* Font Family */
+:root{
+    
+--ff-main: 'Raleway', sans-serif;
+
+
+--fs-xs:0.6rem;
+--fs-sm:0.8rem;
+--fs-md:1.125rem;
+--fs-lg:2.5rem;
+
+--fw-bold:700;
+--fw-md:500;
+--fw-regular:400;
+--fw-italic:300;
+
+
+--clr-red:#F23838;
+--clr-white:#FFFFFF;
+--clr-black:#000000;
+--clr-gray:#808080;
+
+
+}

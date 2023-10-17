@@ -1,0 +1,62 @@
+.header-title{
+    color: var(--clr-white);
+    font-family: var(--ff-main);
+    font-size: var(--fs-lg);
+    margin-left: 1rem;
+    display: flex;
+    width: 13rem;
+    padding: 0.8rem;
+}
+
+.voting-title{
+    color: var(--clr-black);
+    font-family: var(--ff-main);
+    font-size: var(--fs-md);
+    
+}
+
+.recepie-title{
+    font-family: var(--ff-main);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.recepie-details-txt{
+    font-family: var(--ff-main);
+    font-size: var(--fs-sm);
+    color: var(--clr-white);
+    text-align: center; 
+    margin-top: 1.4rem; 
+    font-weight: var(--fw-regular);
+    
+}
+.featured-title{
+    font-family: var(--ff-main);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.featured-details-txt{
+    font-family: var(--ff-main);
+    font-size: var(--fs-xs );
+    color: var(--clr-white);
+    text-align: center; 
+    margin-top: 1.3rem; 
+    font-weight: var(--fw-regular);
+    
+}
+
+.footer-text{
+    font-family: var(--ff-main);
+    font-size: var(--fs-xs); 
+    color: var(--clr-gray);
+    text-align: center;
+}
