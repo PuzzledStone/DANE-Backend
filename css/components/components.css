@@ -67,6 +67,7 @@
     background-color: var(--clr-white);
     border-radius: 0.5rem;
 }
+
 .more-btn{
     font-style: italic;
     font-family: var(--ff-main);
