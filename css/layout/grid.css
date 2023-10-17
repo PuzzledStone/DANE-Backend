@@ -86,6 +86,11 @@ margin-left:100px;
 .most-voting-container{
     text-align: center;
 }
+
+
+.most-voting-container{
+    text-align: center;
+}
 .voted-recipes-container{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     display: grid;
