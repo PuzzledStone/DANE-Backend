@@ -92,3 +92,15 @@
     margin-top: 0.5rem;
     width: 100%;
 }
+
+@media (max-width: 767.98px){
+
+    .log-nav{
+       display: none;
+    }
+    
+    .register-nav{
+        display: none;
+    
+    }
+}
