@@ -44,8 +44,8 @@
         margin-top: 1.3rem; 
         
     }
-}
-@media (max-width: 768px) {
+
+
     .details-container {
         font-size: var(--fs-sm);
         /* Estilos específicos para pantallas con ancho máximo de 768px */
@@ -91,7 +91,7 @@
         font-size: var(--fs-xs);
     }
     .voted-recipes-container{
-        margin-left:30px ;
+        margin: auto;
     }
 }
   
