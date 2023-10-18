@@ -82,7 +82,7 @@ th {
     
 margin-left:100px;
 }
-/*------------------------------------------------------------------------------*/
+
 .most-voting-container{
     text-align: center;
 }
@@ -114,4 +114,11 @@ margin-left:100px;
     width: 85vw;
 }
 
-
+@media (max-width: 767.98px){
+    .cta-container{
+      
+        background-position: left; 
+        margin-top: 4rem;
+    }
+    
+}

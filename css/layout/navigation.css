@@ -30,11 +30,13 @@
         right: 0;
         width: 50%;
         height: 100vh;
-        background-color: black;
+        background-color: var(--clr-black);
         text-align: left;
         align-content: center;
         padding-left: 2rem;
         display: none; /* Oculta el nav-list de forma predeterminada */
+        z-index: 6;
+        border-bottom-left-radius: 2rem;
     }
 
     .mobile-btn {
@@ -43,7 +45,7 @@
         right: 1.2rem;
         width: 1.5rem;
         height: 1.5rem;
-        z-index: 5;
+        z-index: 8;
     }
 
     .mobile-check {
@@ -51,7 +53,7 @@
         opacity: 0;
         top: 3.5rem;
         right: 2.25rem;
-        z-index: 4;
+        z-index: 7;
     }
 
     .mobile-check:checked ~ .nav-list {
