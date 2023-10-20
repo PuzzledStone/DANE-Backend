@@ -71,11 +71,11 @@
     margin-left: 4rem;
 }
 
-.text-details {
-    display: flex;
+.text-details{
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+    font-size: var(--fs-sm);
     font-family: var(--ff-main);
     width: 80%;
 }
@@ -145,7 +145,7 @@ font-family: var(--ff-main);
         margin-right: 10px;
         }
 
-    .text-details {
+    .text-details{
         font-size: var(--fs-xs);
         margin-left: -6px;
         margin-right: 10px;
