@@ -47,6 +47,7 @@
     width: 25%;
     margin-left: 100px;
     display: flex;
+    font-family: var(--ff-main);
 }
 
 .second-container {
@@ -84,6 +85,7 @@
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+    font-family: var(--ff-main);
 }
 
 .text-details-two {
