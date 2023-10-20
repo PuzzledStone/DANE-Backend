@@ -48,12 +48,11 @@
     .det-container {
         font-size: var(--fs-sm);
         width: 100%;
-        height: 20%;
-
+        height: 40%;
     }
     
     .img-details {
-        width: 80%;
+        width: 100%;
         height: 70%;
         margin-left: 20px;
         }
@@ -75,7 +74,7 @@
         width: 10%;
     }
     .vote-item {
-        margin-top: -100px;
+        margin-top: -90px;
         font-size: var(--fs-xs);  
         margin-right:220px; 
     }
