@@ -93,6 +93,13 @@
     width: 100%;
 }
 
+.line-red {
+    border: 0.3rem solid red;
+    background: var(--clr-red);
+}
+
+
+
 @media (max-width: 767.98px){
 
     .log-nav{
@@ -102,5 +109,9 @@
     .register-nav{
         display: none;
     
+    }
+
+    .line-red{
+        margin-top: 4rem;
     }
 }

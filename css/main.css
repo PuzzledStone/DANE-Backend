@@ -53,17 +53,17 @@
     
     .img-details {
         width: 50%;
-        margin-left: 50px; /* Elimina el margen izquierdo para que la imagen sea más flexible */
+        margin-left: 50px; 
     }
     
     .title-container {
-        font-size: var(--fs-sm); /* Puedes mantener el tamaño de fuente original o ajustarlo según tus necesidades */
+        font-size: var(--fs-sm); 
         margin-left: 100px;
        
     }
     
     .second-container {
-        font-size: var(--fs-xs); /* Puedes mantener el tamaño de fuente original o ajustarlo según tus necesidades */
+        font-size: var(--fs-xs); 
         margin-top: 1.3rem;
         margin-left: 10px;
        
@@ -75,7 +75,7 @@
         }
     
     .vote-item {
-        font-size: var(--fs-xs); /* Puedes mantener el tamaño de fuente original o ajustarlo según tus necesidades */
+        font-size: var(--fs-xs); 
         margin-top: 1.3rem;
         margin-right:220px; 
     }
