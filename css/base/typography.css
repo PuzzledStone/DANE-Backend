@@ -92,7 +92,7 @@
 .hardpl-details-text {
     font-size: var(--fs-sm);
     font-family: var(--ff-main);
-    margin-top: .1rem;
+    margin-top: .3rem;
     margin-left: 1.5rem;
 }
 
@@ -161,13 +161,12 @@
 
     .title-hardpl {
         font-size: var(--fs-sm);
-        margin-top: 4rem;
+        margin-top: 2rem;
         margin-left: 3.5rem;
     }
 
     .hardpl-details-text {
         font-size: var(--fs-xs);
-        margin-top: .1rem;
         margin-left: 0.3rem;
     }
 
