@@ -26,22 +26,6 @@
 
 }
 
-.img-details {
-    border-radius: 100%;
-    background-position: center;
-    margin-left: 100px;
-    display: flex;
-    width: 20%;
-
-}
-
-.title-container-two {
-    position: relative;
-    width: 17%;
-    margin-left: 100px;
-    display: flex;
-}
-
 .title-container {
     position: relative;
     width: 25%;
@@ -51,66 +35,10 @@
 }
 
 .second-container {
-    margin-top: -100px;
-    position: relative;
-    width: 100%;
+    font-size: var(--fs-xs);
+    margin-top: -0.7rem;
+    margin-left: 5px;
 }
-
-.vote-item {
-    width: 100%;
-    display: flex;
-}
-
-.left {
-    width: 4%;
-    margin-right: 10px;
-}
-
-.right {
-    width: 4%;
-    margin-left: 100px;
-    margin-right: 10px;
-}
-
-.line {
-    border-top: 10px solid hsl(0, 88%, 58%);
-}
-
-.space {
-    margin-left: 200px;
-}
-
-.text-details {
-    display: flex;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    font-family: var(--ff-main);
-}
-
-.text-details-two {
-    display: flex;
-    margin-top: 50px;
-    margin-left: 500px;
-  
-}
-
-.title-detail {
-    margin-left: 400px
-}
-.two-columns {
-    column-count: 2;
-    column-gap: 20px; 
-}
-
-.realce {
-    transition: transform 0.2s;
-}
-
-.realce:hover {
-    transform: scale(1.2);
-}
-
 
 .most-voting-container {
     text-align: center;
@@ -153,5 +81,28 @@
     .featured-container{
         grid-template-columns: repeat(1, 1fr);  
     }
+    .det-container {
+        font-size: var(--fs-sm);
+        width: 100%;
+        height: 40%;
+    }
+        
+    .title-container {
+        font-size: var(--fs-sm); 
+        margin-left: 30px;
+    }
     
+    .second-container {
+        margin-top: 1rem;
+        margin-left: 9px;
+       
+    }
+    .vote-item { 
+        margin-top: -3rem; 
+        font-size: var(--fs-xs);  
+        margin-right:220px; 
+    }  
+    .voted-recipes-container{
+        margin: auto;
+    }  
 }
