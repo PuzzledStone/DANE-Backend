@@ -114,4 +114,20 @@
     .line-red{
         margin-top: 4rem;
     }
+
+    .more-btn{    
+        font-size: var(--fs-xs);
+        color: var(--clr-white); 
+        margin-top: 0.5rem;
+    }
+
+    .like-btn{
+        width: 20%;
+        border-radius: 0.5rem;
+    }
+
+    .recepie-main{     
+        height: 8.9375rem;
+        margin-top: 3rem;
+    }
 }
