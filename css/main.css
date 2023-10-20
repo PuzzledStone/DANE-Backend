@@ -45,21 +45,26 @@
         
     }
 
-
-    .details-container {
+    .det-container {
         font-size: var(--fs-sm);
-        /* Estilos específicos para pantallas con ancho máximo de 768px */
+        width: 100%;
+        height: 40%;
     }
     
     .img-details {
         width: 50%;
         margin-left: 50px; 
     }
+        width: 100%;
+        height: 70%;
+        margin-left: 20px;
+        }
     
     .title-container {
         font-size: var(--fs-sm); 
         margin-left: 100px;
        
+        margin-left: 10px;  
     }
     
     .second-container {
@@ -77,6 +82,8 @@
     .vote-item {
         font-size: var(--fs-xs); 
         margin-top: 1.3rem;
+        margin-top: -90px;
+        font-size: var(--fs-xs);  
         margin-right:220px; 
     }
     .left {
@@ -84,11 +91,10 @@
         width: 10%;
         margin-left: 100px;
     }
-    table {
-        width: 5%; 
-        margin-left: 0;
-        margin-right: 0;
-        font-size: var(--fs-xs);
+    .right {
+        width: 10%;
+        margin-left: 100px;
+        margin-right: 10px;
     }
     .voted-recipes-container{
         margin: auto;
