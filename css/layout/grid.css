@@ -9,12 +9,13 @@
 }
 
 .det-container {
-    margin-top:100px;
+    margin-top: 100px;
     width: 80%;
     height: 60%;
     display: flex;
 
 }
+
 .det-container-text {
     width: 100%;
     display: flex;
@@ -63,12 +64,14 @@
     grid-template-columns: repeat(2, 1fr);
     border: 3px solid var(--clr-black);
 }
+
 .hardpl-recepie {
     border-radius: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  
+    grid-template-columns: repeat(2, 1fr);
 
 }
+
 .featured-container {
     grid-template-columns: repeat(3, 1fr);
     display: grid;
@@ -76,43 +79,48 @@
     gap: 2rem;
     width: 85vw;
 }
+
 .vote-item {
     width: 100%;
     display: flex;
     margin-top: -300px;
 }
+
 @media (max-width: 767.98px) {
     .cta-container {
         background-position: left;
         margin-top: 4rem;
     }
 
-    .featured-container{
-        grid-template-columns: repeat(1, 1fr);  
+    .featured-container {
+        grid-template-columns: repeat(1, 1fr);
     }
+
     .det-container {
         font-size: var(--fs-sm);
         width: 100%;
         height: 40%;
     }
-        
+
     .title-container {
-        font-size: var(--fs-sm); 
+        font-size: var(--fs-sm);
         margin-left: 30px;
     }
-    
+
     .second-container {
         margin-top: 1rem;
         margin-left: 9px;
-       
+
     }
-    .vote-item { 
-        margin-top: -9rem; 
-        font-size: var(--fs-xs);  
-        margin-right:220px; 
+
+    .vote-item {
+        margin-top: -9rem;
+        font-size: var(--fs-xs);
+        margin-right: 220px;
         padding-bottom: 2rem;
-    }  
-    .voted-recipes-container{
+    }
+
+    .voted-recipes-container {
         margin: auto;
-    }  
+    }
 }

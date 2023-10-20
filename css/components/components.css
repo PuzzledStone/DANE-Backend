@@ -1,18 +1,18 @@
-.logo-nav{
+.logo-nav {
     scale: 25%;
     left: -8rem;
     position: absolute;
     top: -2.5rem;
 }
 
-.log-nav{
+.log-nav {
     scale: 125%;
     position: absolute;
     right: 5rem;
     top: 1.1rem;
 }
 
-.register-nav{
+.register-nav {
     scale: 135%;
     position: absolute;
     right: 1rem;
@@ -20,13 +20,13 @@
 
 }
 
-.recepie-main{
+.recepie-main {
     border-bottom-left-radius: 2rem;
     width: 110%;
     display: flex;
 }
 
-.featured-img{
+.featured-img {
     border-bottom-left-radius: 2rem;
     width: 110%;
     height: 8.9375rem;
@@ -34,44 +34,48 @@
     margin-top: 3rem;
 }
 
-.red-box{
-   background-color: var(--clr-red);
-   border-top-right-radius: 2rem;
-   border-bottom-right-radius: 2rem; 
+.red-box {
+    background-color: var(--clr-red);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }
-.hardpl-box{
+
+.hardpl-box {
     margin-top: 1rem;
     margin-left: 5rem;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem; 
-    border-bottom-left-radius: 2rem; 
-    width: 30%; 
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    width: 30%;
 
- }
- .hardpl-btn{
+}
+
+.hardpl-btn {
     background-color: var(--clr-red);
     margin-top: 1rem;
     margin-left: 17rem;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem; 
-    border-bottom-left-radius: 2rem; 
-    width: 15%; 
- }
-.white-line{
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    width: 15%;
+}
+
+.white-line {
     display: flex;
     border-radius: 5rem;
     padding: 2px;
     background-color: var(--clr-white);
-    
+
 }
 
-.like-img{
+.like-img {
     width: 100%;
     margin-bottom: -4px;
 }
-.like-btn{
+
+.like-btn {
     width: 15%;
     border: none;
     background-color: var(--clr-white);
@@ -79,31 +83,31 @@
     border-radius: 0.5rem;
 }
 
-.featured-like-btn{
+.featured-like-btn {
     width: 20%;
     border: none;
     background-color: var(--clr-white);
     border-radius: 0.5rem;
 }
 
-.more-btn{
+.more-btn {
     font-style: italic;
     font-family: var(--ff-main);
     font-size: var(--fs-sm);
-    color: var(--clr-white); 
+    color: var(--clr-white);
     font-weight: var(--fw-regular);
     border: none;
     background-color: transparent;
     margin-top: 0.5rem;
     width: 100%;
-    
+
 }
 
-.featured-more-btn{
+.featured-more-btn {
     font-style: italic;
     font-family: var(--ff-main);
     font-size: var(--fs-xs);
-    color: var(--clr-white); 
+    color: var(--clr-white);
     font-weight: var(--fw-regular);
     border: none;
     background-color: transparent;
@@ -115,6 +119,7 @@
     border: 0.3rem solid red;
     background: var(--clr-red);
 }
+
 .img-details {
     border-radius: 100%;
     background-position: center;
@@ -124,11 +129,12 @@
     height: 50%;
 
 }
-.hardimg-detail{
+
+.hardimg-detail {
     margin-top: 1rem;
     border-radius: 50%;
     background-position: center;
-    margin-left:0.5rem;
+    margin-left: 0.5rem;
     display: flex;
     width: 80%;
     height: 60%;
@@ -145,62 +151,68 @@
     margin-left: 100px;
     margin-right: 10px;
 }
+
 .line {
     border-top: 10px solid hsl(0, 88%, 58%);
 }
 
-@media (max-width: 767.98px){
-    .log-nav{
-       display: none;
-    }
-    
-    .register-nav{
+@media (max-width: 767.98px) {
+    .log-nav {
         display: none;
-    
     }
 
-    .line-red{
+    .register-nav {
+        display: none;
+
+    }
+
+    .line-red {
         margin-top: 4rem;
     }
 
-    .more-btn{    
+    .more-btn {
         font-size: var(--fs-xs);
-        color: var(--clr-white); 
+        color: var(--clr-white);
         margin-top: 0.5rem;
     }
 
-    .like-btn{
+    .like-btn {
         width: 20%;
         border-radius: 0.5rem;
     }
 
-    .recepie-main{     
+    .recepie-main {
         height: 8.9375rem;
         margin-top: 3rem;
     }
+
     .left {
         margin-top: 50px;
         width: 10%;
         margin-left: 100px;
     }
+
     .right {
         width: 10%;
         margin-left: 100px;
         margin-right: 10px;
     }
-    .hardpl-box{
+
+    .hardpl-box {
         margin-top: 1rem;
-        margin-left: 1.5rem;  
-        width: 30%; 
-    
-     }
-     .hardpl-btn{
+        margin-left: 1.5rem;
+        width: 30%;
+
+    }
+
+    .hardpl-btn {
         margin-top: 2rem;
-        margin-left: 3.5rem; 
-        width: 40%; 
-     }
-     .img-details {
+        margin-left: 3.5rem;
+        width: 40%;
+    }
+
+    .img-details {
         width: 100%;
         height: 20%;
-    }   
+    }
 }
