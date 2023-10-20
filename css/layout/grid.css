@@ -63,7 +63,12 @@
     grid-template-columns: repeat(2, 1fr);
     border: 3px solid var(--clr-black);
 }
+.hardpl-recepie {
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
 
+}
 .featured-container {
     grid-template-columns: repeat(3, 1fr);
     display: grid;
@@ -71,7 +76,11 @@
     gap: 2rem;
     width: 85vw;
 }
-
+.vote-item {
+    width: 100%;
+    display: flex;
+    margin-top: -300px;
+}
 @media (max-width: 767.98px) {
     .cta-container {
         background-position: left;
@@ -98,7 +107,7 @@
        
     }
     .vote-item { 
-        margin-top: -3rem; 
+        margin-top: -10rem; 
         font-size: var(--fs-xs);  
         margin-right:220px; 
     }  
