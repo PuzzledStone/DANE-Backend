@@ -32,7 +32,7 @@
 
     .nav-list {
         display: grid;
-        position: absolutet;
+        position: absolute;
         margin: 0;
         top: 0;
         right: 0;
@@ -42,7 +42,7 @@
         text-align: left;
         align-content: center;
         padding-left: 2rem;
-        display: none; /* Oculta el nav-list de forma predeterminada */
+        display: none;
         z-index: 2;
         border-bottom-left-radius: 2rem;
     }
