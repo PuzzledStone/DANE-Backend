@@ -9,8 +9,9 @@
 }
 
 .det-container {
-    margin-top:200px;
+    margin-top:100px;
     width: 80%;
+    height: 60%;
     display: flex;
 
 }
@@ -30,12 +31,11 @@
     background-position: center;
     margin-left: 100px;
     display: flex;
-    width: 30%;
+    width: 20%;
 
 }
 
 .title-container-two {
-
     position: relative;
     width: 17%;
     margin-left: 100px;
@@ -50,6 +50,7 @@
 }
 
 .second-container {
+    margin-top: -100px;
     position: relative;
     width: 100%;
 }
@@ -94,6 +95,10 @@
 
 .title-detail {
     margin-left: 400px
+}
+.two-columns {
+    column-count: 2;
+    column-gap: 20px; 
 }
 
 .realce {
