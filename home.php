@@ -43,7 +43,9 @@
     </div>
 
     <main>
-
+            <?php 
+                
+            ?>
         <section class="most-voting-container">
             <h1 class="voting-title"> The most voted </h1>
             <div class="voted-recipes-container">
