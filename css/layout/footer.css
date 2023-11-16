@@ -1,4 +1,5 @@
 .footer-container{
     background-color: var(--clr-red);
-    padding: 15px;   
+    padding: 15px;
+    margin-top: 1rem;   
 }

@@ -74,9 +74,9 @@
 }
 
 .text-details {
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-top: 1rem;
+    margin-left: 3rem;
+   
     font-size: var(--fs-sm);
     font-family: var(--ff-main);
     width: 80%;
@@ -92,8 +92,8 @@
 .hardpl-details-text {
     font-size: var(--fs-sm);
     font-family: var(--ff-main);
-    margin-top: .3rem;
-    margin-left: 1.5rem;
+    margin-top: .6rem;
+    text-align: center;
 }
 
 .hardpl-details-show {
@@ -109,8 +109,8 @@
 .title-hardpl {
     font-size: var(--fs-md);
     font-family: var(--ff-main);
-    margin-top: 2rem;
-    margin-left: 17rem;
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
 

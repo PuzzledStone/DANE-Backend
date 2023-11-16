@@ -114,6 +114,7 @@
     background-color: transparent;
     margin-top: 0.5rem;
     width: 100%;
+    cursor: pointer;
 }
 
 .line-red {
@@ -126,7 +127,7 @@
     background-position: center;
     margin-left: 25px;
     display: flex;
-    width: 70%;
+    width: 50%;
     height: 50%;
 
 }

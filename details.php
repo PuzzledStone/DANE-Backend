@@ -1,3 +1,33 @@
+<?php 
+  require_once './database.php';
+
+  $link = "";
+  $url_params = "";
+
+
+  if($_GET){
+          $item = $database->select("tb_dishes",[
+              "[>]tb_categories"=>["id_categoria" => "id_categoria"]
+          ],[
+              "tb_dishes.id_informacion_platillo",
+              "tb_dishes.nombre",
+              "tb_dishes.descripcion",
+              "tb_dishes.imagen",
+              "tb_dishes.precio",
+              "tb_dishes.nombre_categoria",
+              "tb_dishes.personas",
+          
+          ],[
+              "id_informacion_platillo"=>$_GET["id"]
+          ]);
+          
+          $url_params = "id=".$item[0]["id_informacion_platillo"];
+     
+  }
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,26 +61,31 @@
     </header>
     <main>
     <div class="line"> </div>
-    <section class="det-container">
-        <img class="img-details realce" src="imgs/recepies/bibimbap.jpg" alt="logo">
-        <div>
-            <h1 class="title-container">Bibimbap</h1>
-            <div class="second-container">
-                <p class="text-details ">Bibimbap is a traditional Korean dish that
-                    is made up of white rice and many vegetables,
-                    to which protein such as meat and egg is added,
-                    as well as spicy sauce. But currently there are
-                    many varieties of this complete dish,
-                    including vegetarian and vegan versions.</p>
+    <?php 
+        
+   
+    echo "<section class='det-container'>
+        
+        <img class='img-details realce' src='scraping/images/".$item[0]["imagen"]."' alt='logo'>
+            <div>
+            <h1 class='title-container'>".$item[0]["nombre"]."</h1>
+            <div class='second-container'>
+                <p class='text-details'>".$item[0]["descripcion"]."</p>
+                <p class='text-details'>".$item[0]["nombre_categoria"]."</p>
+                <p class='text-details'> Designed for ".$item[0]["personas"]." person/s</p>
+                <p class='text-details'>".$item[0]["precio"]." $    </p>
             </div>
         </div>
     </section>
-    <section class="vote-item">
+    <section class='vote-item'>
         <div>
-            <a href="#"><img class="left space realce" src="imgs/icons/liketwo.png"alt="log"></a>
-            <a href="#"><img class="right realce"   src="imgs/icons/flagtwo.png" alt="logo"></a>
+            <a href='#'><img class='left space realce' src='imgs/icons/liketwo.png'alt='log'></a>
+            <a href='#'><img class='right realce'   src='imgs/icons/flagtwo.png' alt='logo'></a>
         </div>
-    </section>
+    </section>";
+    ?>
+
+    <!-- most voted -->
     <section class="most-voting-container">
         <div class="voted-recipes-container">
             <section class="recepie">

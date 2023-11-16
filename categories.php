@@ -30,63 +30,29 @@
     </header>
     <main>
     <div class="line"></div>
-    <div><h1 class="title-hardpl">Main course</h1></div>
-    <section class="hardpl-recepie ">
-     <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-        <div class="hardpl-box realce">
-           <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-               <h1 class="hardpl-details-text">Bibimap</h1>
-        </div>
-       </div>
-       <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    <div class="hardpl-box realce">
-        <img class="hardimg-detail" src="imgs/recepies/bibimbap.jpg" alt="logo"></a>
-            <h1 class="hardpl-details-text">Bibimap</h1>
-     </div>
-    </div>
-    </section>
-    <section>
-<div>
-    <h1 class= "hardpl-btn hardpl-details-show realce">Ver mas</h1>
-</div>
-    </section>
+    <div><h1 class="title-hardpl">Categories</h1></div>
+    <?php 
+        
+    
+        echo "<section class='hardpl-recepie'>
+                <div class='hardpl-box realce'>
+                     <img class='hardimg-detail' src='imgs/resources/plato fuerte.jpg' alt='logo'></a>
+                    <h1 class='hardpl-details-text'>Main Course</h1>
+                </div>
+                <div class='hardpl-box realce'>
+                    <img class='hardimg-detail' src='imgs/resources/ensalada.jpg' alt='logo'></a>
+                     <h1 class='hardpl-details-text'>Salads</h1>
+                </div>
+                <div class='hardpl-box realce'>
+                    <img class='hardimg-detail' src='imgs/resources/bebida.jpg' alt='logo'></a>
+                    <h1 class='hardpl-details-text'>Drinks</h1>
+                </div>
+                <div class='hardpl-box realce'>
+                    <img class='hardimg-detail' src='imgs/resources/entrada.jpg' alt='logo'></a>
+                    <h1 class='hardpl-details-text'>Starter Dish</h1>
+                </div>
+        </section>";
+    ?>
 </body>
 </main>
 <footer class="footer-container">
