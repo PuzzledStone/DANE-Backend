@@ -26,7 +26,7 @@
 </head>
 <body>
     <h2>Delete Dish: <?php echo $data[0]["nombre"]; ?></h2>
-    <form method="post" action="delete-destination.php">
+    <form method="post" action="delete-dishes.php">
         <input name="id" type="hidden" value="<?php echo $data[0]["id_informacion_platillo"]; ?>">
         <input type="button" onclick="history.back();" value="CANCEL">
         <input type="submit" value="DELETE">

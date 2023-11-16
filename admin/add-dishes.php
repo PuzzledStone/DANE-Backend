@@ -49,7 +49,7 @@
                     }
                 }
 
-                $database->update("tb_dishes",[
+                $database->insert("tb_dishes",[
                     "id_categoria"=>$_POST["categoria"],
                     "nombre_categoria" => $category_name,
                     "nombre"=>$_POST["nombre"],
