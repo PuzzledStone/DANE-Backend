@@ -18,13 +18,13 @@
             <label class="mobile-btn">
                 <span></span>
             </label>
-            <a href="home.html"><img class="logo-nav" src="imgs/icons/logo.png" alt="logo"></a>
+            <a href="home.php"><img class="logo-nav" src="imgs/icons/logo.png" alt="logo"></a>
             <a href="#"><img class="log-nav" src="imgs/icons/log-out.png" alt="log"></a>
             <a href="#"><img class="register-nav" src="imgs/icons/register.png" alt="register"></a>
             <ul class="nav-list">
-                <li><a class="nav-list-link" href="categories.html">Categories</a></li>
-                <li><a class="nav-list-link" href="home.html">Home</a></li>
-                <li><a class="nav-list-link" href="featured.html">Featured dishes</a></li>
+                <li><a class="nav-list-link" href="categories.php">Categories</a></li>
+                <li><a class="nav-list-link" href="home.php">Home</a></li>
+                <li><a class="nav-list-link" href="featured.php">Featured dishes</a></li>
             </ul>
         </nav>
     </header>
