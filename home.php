@@ -50,7 +50,7 @@
               echo"<div class='voted-recipes-container'>";
               for ($i = 0; $i < 2; $i++) { 
                 $name = $items[$i]["nombre"];
-                $limitedName = (strlen($name) > 12) ? substr($name, 0, 14) : $name; 
+                $limitedName = (strlen($name) > 20) ? substr($name, 0, 20) : $name; 
                 echo "<section class='recepie'>
                 <div>
                     <h1 class='featured-title'>".$limitedName."</h1>
@@ -84,7 +84,7 @@
             <div class='featured-container'>";
             for ($i = 0; $i < 9; $i++) {  
                 $name = $items[$i]["nombre"];
-                $limitedName = (strlen($name) > 12) ? substr($name, 0, 14) : $name;
+                $limitedName = (strlen($name) > 10) ? substr($name, 0, 10) : $name;
             echo "<section class='recepie'>
                     <div>
                         <h1 class='featured-title'>".$limitedName."</h1>

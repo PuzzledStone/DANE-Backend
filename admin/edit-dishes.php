@@ -1,23 +1,24 @@
 <?php 
-    /***
-     * 0. include database connection file
-     * 1. receive form values from post and insert them into the table (match table field with values from name atributte)
-     * 2. for the destination_image insert the value "destination-placeholder.webp"
-     * 3. redirect to list-dishes. php after complete the insert into
-     */
-
+   
      require_once '../database.php';
-
-    
 
      // Reference: https://medoo.in/api/select
      $categories = $database->select("tb_categories","*");
 
      $message = "";
 
+     if($_GET){
+        $item = $database->select("tb_dishes","*",[
+            "id_informacion_platillo" => $_GET["id"],
+        ]);
+     }
+
      if($_POST){
 
-        if(isset($_FILES["imagen"])){
+        $data = $database->select("tb_dishes","*", ["id_informacion_platillo"=>$_POST["id"]]);
+
+        if(isset($_FILES["imagen"]) && $_FILES["imagen"]["name"] != ""){
+
             $errors = [];
             $file_name = $_FILES["imagen"]["name"];
             $file_size = $_FILES["imagen"]["size"];
@@ -48,40 +49,45 @@
                         break;
                     }
                 }
-
-                $database->update("tb_dishes",[
-                    "id_categoria"=>$_POST["categoria"],
-                    "nombre_categoria" => $category_name,
-                    "nombre"=>$_POST["nombre"],
-                    "descripcion"=>$_POST["descripcion"],
-                    "imagen"=> $img,
-                    "precio"=>$_POST["precio"],
-                    "personas"=>$_POST["personas"],
-                    "destacado"=>$_POST["destacado"]
-                ]);
+            }
+            
+        }else{
+            $img = $data[0]["imagen"];
+        }
+        
+        $database->update("tb_dishes",[
+            "id_categoria"=>$_POST["categoria"],
+            "nombre_categoria" => $category_name,
+            "nombre"=>$_POST["nombre"],
+            "descripcion"=>$_POST["descripcion"],
+            "imagen"=> $img,
+            "precio"=>$_POST["precio"],
+            "personas"=>$_POST["personas"],
+            "destacado"=>$_POST["destacado"]
+        ],[
+            "id_informacion_platillo" => $_POST["id"]
+        ]);
 
                 header("Location: list-dishes.php");
                 exit();
             }
-        }
-        
-     }
+          
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Dishes</title>
+    <title>Edit Dishes</title>
     <link rel="stylesheet" href="../css/themes/admin.css">
 </head>
 <body>
     <div class="container">
-        <h2>Add New Dish</h2>
+        <h2>Edit Dishes</h2>
         <?php 
             echo $message;
         ?>
-        <form method="post" action="add-dishes.php" enctype="multipart/form-data">
+        <form method="post" action="edit-dishes.php" enctype="multipart/form-data">
             <div class="form-items">
                 <label for="nombre">Dish Name</label>
                 <input id="nombre" class="textfield" name="nombre" type="text">
@@ -126,7 +132,7 @@
             </div>
 
             <div class="form-items">
-                <input class="submit-btn" type="submit" value="Add New Dish">
+                <input class="submit-btn" type="submit" value="Edit Dish">
             </div>
         </form>
     </div>

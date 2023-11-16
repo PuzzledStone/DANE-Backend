@@ -10,7 +10,7 @@
     $menu_item_descriptions = [];
     $image_urls = [];
 
-    $menu_items = 9;
+    $menu_items = 10;
 
     $items = file_get_html($link);
 
@@ -70,12 +70,13 @@
         file_put_contents("./images/".$image.".jpg", file_get_contents($image_urls[$index]));
     }
 
-    for($i=0; $i<9; $i++){
+    for($i=0; $i<10; $i++){
         // Reference: https://medoo.in/api/insert
         $database->insert("tb_dishes",[
+            "id_categoria"=>null,
             "nombre"=>$menu_item_names[$i],
             "imagen"=> $filenames[$i] . ".jpg",
-            "categoria"=>null,
+            "nombre_categoria"=>null,
             "destacado"=>null,
             "descripcion"=>$menu_item_descriptions[$i],
             "personas"=>rand(1,3),
@@ -83,6 +84,6 @@
         ]);
     }
     
-    
+    // note: the administrator will need to edit some names so that they can be placed correctly in the spaces: 14 characters maximum
 
 ?>
