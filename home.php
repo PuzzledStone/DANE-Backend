@@ -43,234 +43,68 @@
     </div>
 
     <main>
-            <?php 
-                
+    <?php 
+              echo "<section class='most-voting-container'>";
+              echo "<h1 class='voting-title'>The most voted</h1>";
+              
+              echo"<div class='voted-recipes-container'>";
+              for ($i = 0; $i < 2; $i++) { 
+                $name = $items[$i]["nombre"];
+                $limitedName = (strlen($name) > 12) ? substr($name, 0, 14) : $name; 
+                echo "<section class='recepie'>
+                <div>
+                    <h1 class='featured-title'>".$limitedName."</h1>
+                    <img class='featured-img' src='scraping/images/".$items[$i]["imagen"]."' alt='bibimbap'>
+                </div>
+                <div class='red-box'>
+                    <p class='featured-details-txt'>Details</p>
+                    <p class='featured-details-txt'>Size: ".$items[$i]["personas"]." person/s</p>
+                    <p class='featured-details-txt'>".$items[$i]["precio"]." $</p>
+                    <p class='featured-details-txt'>Related dishes:</p>
+                    <p class='featured-details-txt'>Category: strong dish</p>
+                    <span class='white-line'></span>
+                    <a href='details.html'><button class='featured-more-btn'>View more</button></a>
+                    <button class='featured-like-btn'> <img class='like-img' src='imgs/icons/heart.png' alt='like-btn'></button>
+                </div>
+            </section>";
+              }
+              echo"</div>";
+          echo "</section>"; 
             ?>
-        <section class="most-voting-container">
-            <h1 class="voting-title"> The most voted </h1>
-            <div class="voted-recipes-container">
-                <section class="recepie">
+        
 
+
+        <!-- php fetured dishes -->
+
+
+            <?php
+            
+            echo "<section class='most-voting-container'>
+            <h1 class='voting-title'>Featured dishes</h1>
+            <div class='featured-container'>";
+            for ($i = 0; $i < 9; $i++) {  
+                $name = $items[$i]["nombre"];
+                $limitedName = (strlen($name) > 12) ? substr($name, 0, 14) : $name;
+            echo "<section class='recepie'>
                     <div>
-                        <h1 class="recepie-title">Bibimbap</h1>
-                        <img class="recepie-main" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
+                        <h1 class='featured-title'>".$limitedName."</h1>
+                        <img class='featured-img' src='scraping/images/".$items[$i]["imagen"]."' alt='bibimbap'>
                     </div>
-
-                    <div class="red-box">
-                        <p class="recepie-details-txt">Details</p>
-                        <p class="recepie-details-txt">Size: Individual</p>
-                        <p class="recepie-details-txt">Price: 50$</p>
-                        <p class="recepie-details-txt">Related dishes:</p>
-                        <p class="recepie-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
+                    <div class='red-box'>
+                        <p class='featured-details-txt'>Details</p>
+                        <p class='featured-details-txt'>Size: ".$items[$i]["personas"]." person/s</p>
+                        <p class='featured-details-txt'>".$items[$i]["precio"]." $</p>
+                        <p class='featured-details-txt'>Related dishes:</p>
+                        <p class='featured-details-txt'>Category: strong dish</p>
+                        <span class='white-line'></span>
+                        <a href='details.html'><button class='featured-more-btn'>View more</button></a>
+                        <button class='featured-like-btn'> <img class='like-img' src='imgs/icons/heart.png' alt='like-btn'></button>
                     </div>
-                </section>
-                <section class="recepie">
-                    <div>
-                        <h1 class="recepie-title">Bibimbap</h1>
-                        <img class="recepie-main" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="recepie-details-txt">Details</p>
-                        <p class="recepie-details-txt">Size: Individual</p>
-                        <p class="recepie-details-txt">Price: 50$</p>
-                        <p class="recepie-details-txt">Related dishes:</p>
-                        <p class="recepie-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-            </div>
-        </section> <!--  end of section -->
-
-        <section class="most-voting-container">
-            <h1 class="voting-title"> Featured dishes </h1>
-            <div class="featured-container">
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
-                <section class="recepie">
-
-                    <div>
-                        <h1 class="featured-title">Bibimbap</h1>
-                        <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                    </div>
-
-                    <div class="red-box">
-                        <p class="featured-details-txt">Details</p>
-                        <p class="featured-details-txt">Size: Individual</p>
-                        <p class="featured-details-txt">Price: 50$</p>
-                        <p class="featured-details-txt">Related dishes:</p>
-                        <p class="featured-details-txt">Category: strong dish</p>
-                        <span class="white-line"></span>
-                        <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                        <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                                alt="like-btn"></button>
-                    </div>
-                </section>
-
+                </section>" ;
+    }  
+    echo "</div>";
+    echo"</section>";    
+            ?>
 
 
         </section>
