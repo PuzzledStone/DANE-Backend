@@ -8,9 +8,8 @@
      $message = "";
 
      if($_GET){
-        $item = $database->select("tb_dishes","*",[
-            "id_informacion_platillo" => $_GET["id"],
-        ]);
+        $item = $database->select("tb_dishes", "*", ["id_informacion_platillo" => $_GET["id"]]);
+        echo "Selected Category ID: " . $item[0]["id_categoria"];
      }
 
      if($_POST){
@@ -68,9 +67,8 @@
             "id_informacion_platillo" => $_POST["id"]
         ]);
 
-                header("Location: list-dishes.php");
-                exit();
-            }
+        header("location: list-dishes.php");
+     }
           
 ?>
 <!DOCTYPE html>
@@ -90,7 +88,7 @@
         <form method="post" action="edit-dishes.php" enctype="multipart/form-data">
             <div class="form-items">
                 <label for="nombre">Dish Name</label>
-                <input id="nombre" class="textfield" name="nombre" type="text">
+                <input id="nombre" class="textfield" name="nombre" type="text" value="<?php echo $item[0]["nombre"] ?>">
             </div>
            
             <div class="form-items">
@@ -107,28 +105,28 @@
 
             <div class="form-items">
                 <label for="descripcion">Dish Description</label>
-                <textarea id="descripcion" name="descripcion" id="" cols="30" rows="10"></textarea>
+                <textarea id="descripcion" name="descripcion" id="" cols="30" rows="10"><?php echo $item[0]["descripcion"] ?></textarea>
             </div>
 
             <div class="form-items">
                 <label for="imagen">Dish Image</label>
-                <img id="preview" src="../imgs/resources/destination-placeholder.webp" alt="Preview">
+                <img id="preview" src="../scraping/images/<?php echo  $item[0]["imagen"] ?>" alt="Preview">
                 <input id="imagen" type="file" name="imagen" onchange="readURL(this)">
             </div>
 
             <div class="form-items">
                 <label for="precio">Dish Price</label>
-                <input id="precio" class="textfield" name="precio" type="text">
+                <input id="precio" class="textfield" name="precio" type="text" value="<?php echo $item[0]["precio"] ?>">
             </div>
 
             <div class="form-items">
                 <label for="personas">Cantidad de Personas</label>
-                <input id="personas" class="textfield" name="personas" type="text">
+                <input id="personas" class="textfield" name="personas" type="text" value="<?php echo $item[0]["personas"] ?>">
             </div>
 
             <div class="form-items">
                 <label for="destacado">Destacado</label>
-                <input id="destacado" class="textfield" name="destacado" type="text">
+                <input id="destacado" class="textfield" name="destacado" type="text" value="<?php echo $item[0]["destacado"] ?>">
             </div>
 
             <div class="form-items">
