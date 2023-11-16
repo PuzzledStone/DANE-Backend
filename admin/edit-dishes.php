@@ -54,21 +54,22 @@
             $img = $data[0]["imagen"];
         }
         
-        $database->update("tb_dishes",[
-            "id_categoria"=>$_POST["categoria"],
+        $database->update("tb_dishes", [
+            "id_categoria" => $_POST["categoria"],
             "nombre_categoria" => $category_name,
-            "nombre"=>$_POST["nombre"],
-            "descripcion"=>$_POST["descripcion"],
-            "imagen"=> $img,
-            "precio"=>$_POST["precio"],
-            "personas"=>$_POST["personas"],
-            "destacado"=>$_POST["destacado"]
-        ],[
+            "nombre" => $_POST["nombre"],
+            "descripcion" => $_POST["descripcion"],
+            "imagen" => $img,
+            "precio" => $_POST["precio"],
+            "personas" => $_POST["personas"],
+            "destacado" => $_POST["destacado"]
+        ], [
             "id_informacion_platillo" => $_POST["id"]
         ]);
 
-        header("location: list-dishes.php");
-     }
+        header("Location: list-dishes.php");
+        exit();
+    }
           
 ?>
 <!DOCTYPE html>
