@@ -46,7 +46,7 @@
             <div class='featured-container'>";
             for ($i = 0; $i < 9; $i++) {  
                 $name = $items[$i]["nombre"];
-                $limitedName = (strlen($name) > 12) ? substr($name, 0, 14) : $name;
+                $limitedName = (strlen($name) > 10) ? substr($name, 0, 10) : $name;
             echo "<section class='recepie'>
                     <div>
                         <h1 class='featured-title'>".$limitedName."</h1>
@@ -54,10 +54,10 @@
                     </div>
                     <div class='red-box'>
                         <p class='featured-details-txt'>Details</p>
-                        <p class='featured-details-txt'>Size: ".$items[$i]["personas"]." person/s</p>
+                        <p class='featured-details-txt'>".$items[$i]["personas"]." person/s</p>
                         <p class='featured-details-txt'>".$items[$i]["precio"]." $</p>
                         <p class='featured-details-txt'>Related dishes:</p>
-                        <p class='featured-details-txt'>Category: strong dish</p>
+                        <p class='featured-details-txt'>".$items[$i]["nombre_categoria"]."</p>
                         <span class='white-line'></span>
                         <a href='details.php'><button class='featured-more-btn'>View more</button></a>
                         <button class='featured-like-btn'> <img class='like-img' src='imgs/icons/heart.png' alt='like-btn'></button>

@@ -1,5 +1,5 @@
 <?php 
-   
+
      require_once '../database.php';
 
      // Reference: https://medoo.in/api/select
@@ -8,8 +8,9 @@
      $message = "";
 
      if($_GET){
-        $item = $database->select("tb_dishes", "*", ["id_informacion_platillo" => $_GET["id"]]);
-        echo "Selected Category ID: " . $item[0]["id_categoria"];
+        $item = $database->select("tb_dishes","*",[
+            "id_informacion_platillo" => $_GET["id"],
+        ]);
      }
 
      if($_POST){
@@ -39,38 +40,38 @@
                 $filename = str_replace('.', '', $filename);
                 $filename = str_replace(' ', '-', $filename);
                 $img = "dish-".$filename.".".$file_ext;
-                move_uploaded_file($file_tmp, "../scraping/images/".$img);
+                move_uploaded_file($file_tmp, "../scraping/images".$img);
 
-                $category_name = "";
+               
+            }
+            
+        }else{
+            $img = $data[0]["imagen"];
+        }
+
+        $category_name = "";
                 foreach ($categories as $category) {
                     if ($category["id_categoria"] == $_POST["categoria"]) {
                         $category_name = $category["nombre_categoria"];
                         break;
                     }
                 }
-            }
-            
-        }else{
-            $img = $data[0]["imagen"];
-        }
         
-        $database->update("tb_dishes", [
-            "id_categoria" => $_POST["categoria"],
+        $database->update("tb_dishes",[
+            "id_categoria"=>$_POST["categoria"],
             "nombre_categoria" => $category_name,
-            "nombre" => $_POST["nombre"],
-            "descripcion" => $_POST["descripcion"],
-            "imagen" => $img,
-            "precio" => $_POST["precio"],
-            "personas" => $_POST["personas"],
-            "destacado" => $_POST["destacado"]
-        ], [
+            "nombre"=>$_POST["nombre"],
+            "descripcion"=>$_POST["descripcion"],
+            "imagen"=> $img,
+            "precio"=>$_POST["precio"],
+            "personas"=>$_POST["personas"],
+            "destacado"=>$_POST["destacado"]
+        ],[
             "id_informacion_platillo" => $_POST["id"]
         ]);
 
-        header("Location: list-dishes.php");
-        exit();
-    }
-          
+        header("location: list-dishes.php");
+     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +83,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Edit Dishes</h2>
+        <h2>Edit Dish</h2>
         <?php 
             echo $message;
         ?>
@@ -91,22 +92,25 @@
                 <label for="nombre">Dish Name</label>
                 <input id="nombre" class="textfield" name="nombre" type="text" value="<?php echo $item[0]["nombre"] ?>">
             </div>
-           
+
             <div class="form-items">
                 <label for="categoria">Dish Category</label>
                 <select name="categoria" id="categoria">
                     <?php 
                         foreach($categories as $category){
-                            echo "<option value='".$category["id_categoria"]."'>".$category["nombre_categoria"]."</option>";
+                            if($item[0]["id_categoria"] == $category["id_categoria"]){
+                                echo "<option value='".$category["id_categoria"]."' selected>".$category["nombre_categoria"]."</option>";
+                            }else{
+                                echo "<option value='".$category["id_categoria"]."'>".$category["nombre_categoria"]."</option>";
+                            }
                         }
                     ?>
                 </select>
                 <input type="hidden" name="nombre_categoria" value="">
             </div>
-
             <div class="form-items">
                 <label for="descripcion">Dish Description</label>
-                <textarea id="descripcion" name="descripcion" id="" cols="30" rows="10"><?php echo $item[0]["descripcion"] ?></textarea>
+                <textarea id="descripcion" name="descripcion" id="" cols="30" rows="10"><?php echo $item[0]["descripcion"]; ?></textarea>
             </div>
 
             <div class="form-items">
@@ -116,22 +120,21 @@
             </div>
 
             <div class="form-items">
-                <label for="precio">Dish Price</label>
-                <input id="precio" class="textfield" name="precio" type="text" value="<?php echo $item[0]["precio"] ?>">
-            </div>
-
-            <div class="form-items">
-                <label for="personas">Cantidad de Personas</label>
+                <label for="personas">How many can eat</label>
                 <input id="personas" class="textfield" name="personas" type="text" value="<?php echo $item[0]["personas"] ?>">
             </div>
 
             <div class="form-items">
-                <label for="destacado">Destacado</label>
+                <label for="precio">Dish Price</label>
+                <input id="precio" class="textfield" name="precio" type="text" value="<?php echo $item[0]["precio"] ?>">
+            </div>
+            <div class="form-items">
+                <label for="destacado">Outstanding</label>
                 <input id="destacado" class="textfield" name="destacado" type="text" value="<?php echo $item[0]["destacado"] ?>">
             </div>
-
+            <input type="hidden" name="id" value="<?php echo $item[0]["id_informacion_platillo"]; ?>">
             <div class="form-items">
-                <input class="submit-btn" type="submit" value="Edit Dish">
+                <input class="submit-btn" type="submit" value="Update Destination">
             </div>
         </form>
     </div>

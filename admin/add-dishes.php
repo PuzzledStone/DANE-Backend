@@ -1,10 +1,4 @@
 <?php 
-    /***
-     * 0. include database connection file
-     * 1. receive form values from post and insert them into the table (match table field with values from name atributte)
-     * 2. for the destination_image insert the value "destination-placeholder.webp"
-     * 3. redirect to list-dishes. php after complete the insert into
-     */
 
      require_once '../database.php';
 
@@ -116,12 +110,12 @@
             </div>
 
             <div class="form-items">
-                <label for="personas">Cantidad de Personas</label>
+                <label for="personas">How many can eat</label>
                 <input id="personas" class="textfield" name="personas" type="text">
             </div>
 
             <div class="form-items">
-                <label for="destacado">Destacado</label>
+                <label for="destacado">outstanding</label>
                 <input id="destacado" class="textfield" name="destacado" type="text">
             </div>
 
