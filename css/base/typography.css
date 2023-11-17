@@ -94,12 +94,20 @@
     font-family: var(--ff-main);
     margin-top: .6rem;
     text-align: center;
+    
+    
+}
+
+.category-page{
+    text-decoration: none;
+    color: var(--clr-black);
 }
 
 .hardpl-details-show {
     font-size: var(--fs-sm);
     font-family: var(--ff-main);
     text-align: center;
+   
 }
 
 .title-detail {

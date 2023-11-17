@@ -20,7 +20,6 @@
             </label>
             <a href="home.php"><img class="logo-nav" src="imgs/icons/logo.png" alt="logo"></a>
             <a href="#"><img class="log-nav" src="imgs/icons/log-out.png" alt="log"></a>
-            <a href="#"><img class="register-nav" src="imgs/icons/register.png" alt="register"></a>
             <ul class="nav-list">
                 <li><a class="nav-list-link" href="categories.php">Categories</a></li>
                 <li><a class="nav-list-link" href="home.php">Home</a></li>
@@ -37,19 +36,27 @@
         echo "<section class='hardpl-recepie'>
                 <div class='hardpl-box realce'>
                      <img class='hardimg-detail' src='imgs/resources/plato fuerte.jpg' alt='logo'></a>
-                    <h1 class='hardpl-details-text'>Main Course</h1>
+                    <h1 class='hardpl-details-text'>
+                        <a href='main-course.php' class='category-page'> Main Course </a>
+                    </h1>
                 </div>
                 <div class='hardpl-box realce'>
                     <img class='hardimg-detail' src='imgs/resources/ensalada.jpg' alt='logo'></a>
-                     <h1 class='hardpl-details-text'>Salads</h1>
+                     <h1 class='hardpl-details-text'>
+                        <a href='salads.php' class='category-page'> Salads </a>
+                     </h1>
                 </div>
                 <div class='hardpl-box realce'>
                     <img class='hardimg-detail' src='imgs/resources/bebida.jpg' alt='logo'></a>
-                    <h1 class='hardpl-details-text'>Drinks</h1>
+                    <h1 class='hardpl-details-text'>
+                        <a href='drinks.php'class='category-page'> Drinks </a>
+                    </h1>
                 </div>
                 <div class='hardpl-box realce'>
                     <img class='hardimg-detail' src='imgs/resources/entrada.jpg' alt='logo'></a>
-                    <h1 class='hardpl-details-text'>Starter Dish</h1>
+                    <h1 class='hardpl-details-text'>
+                        <a href='starter-dish.php' class='category-page'> Starter Dishes </a>
+                    </h1>
                 </div>
         </section>";
     ?>
