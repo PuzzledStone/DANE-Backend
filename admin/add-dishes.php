@@ -6,7 +6,7 @@
 
      // Reference: https://medoo.in/api/select
      $categories = $database->select("tb_categories","*");
-
+     $outstanding = $database->select("tb_outstanding","*");
      $message = "";
 
      if($_POST){
@@ -43,6 +43,14 @@
                     }
                 }
 
+                $outstanding_name = "";
+                foreach ($outstanding as $value) {
+                    if ($value["id_outstanding"] == $_POST["outstanding"]) {
+                        $outstanding_name = $value["value_outstanding"];
+                        break;
+                    }
+                }
+
                 $database->insert("tb_dishes",[
                     "id_categoria"=>$_POST["categoria"],
                     "nombre_categoria" => $category_name,
@@ -51,7 +59,8 @@
                     "imagen"=> $img,
                     "precio"=>$_POST["precio"],
                     "personas"=>$_POST["personas"],
-                    "destacado"=>$_POST["destacado"]
+                    "value_outstanding"=>$outstanding_name,
+                    "id_outstanding"=>$_POST["outstanding"],
                 ]);
 
                 header("Location: list-dishes.php");
@@ -115,8 +124,15 @@
             </div>
 
             <div class="form-items">
-                <label for="destacado">outstanding</label>
-                <input id="destacado" class="textfield" name="destacado" type="text">
+                <label for="outstanding">Outstanding</label>
+                <select name="outstanding" id="outstanding">
+                    <?php 
+                        foreach($outstanding as $value){
+                            echo "<option value='".$value["id_outstanding"]."'>".$value["value_outstanding"]."</option>";
+                        }
+                    ?>
+                </select>
+                <input type="hidden" name="value_outstanding" value="">
             </div>
 
             <div class="form-items">

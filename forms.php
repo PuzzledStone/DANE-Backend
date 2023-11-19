@@ -74,90 +74,67 @@
    ?>
     
     <main>
-    <section class="destinations-container booking-container">
+    <div class="line"></div>
+   
             
+    <section class='account-container'>
+        <div class='form-text'>
+            <section class='login'>
+                <h3 class='title-login'>Login</h3>
+                
+                <form method="post" action="forms.php">
+                    <div class='login-text'>
+                        <label for='username'>Username:</label>
+                        <input id='username' type='text' name='username'>
+                    </div>
+                    <div class='login-text'>
+                        <label for='password'>Password:</label>
+                        <input stylesheet='margin-bottom:1rem' id='password' type='password' name='password'>
+                    </div>
+                    <div class='login-text'>
+                        <input class='login-btn' type='submit' value="LOGIN">
+                    </div>
+                    <p class='form-text login-text'><?php echo $message; ?></p>
+                    <input type="hidden" name="login" value="1">
+                </form>
+            </section>
+        </div>
             
-            <div class="activities-container">
-                <section class='activity'>
-                    <h3 class='activity-title'>Login</h3>
-                    <p>Enter your registered username and password in the designated fields.</p>
-                    <form method="post" action="forms.php">
-                        <div class='form-items'>
-                            <div>
-                                <label class='form-label destination-extra' for='username'>Username</label>
-                            </div>
-                            <div>
-                                <input id='username' class='form-input' type='text' name='username'>
-                            </div>
-                        </div>
-                        <div class='form-items'>
-                            <div>
-                                <label class='form-label destination-extra' for='password'>Password</label>
-                            </div>
-                            <div>
-                                <input id='password' class='form-input' type='password' name='password'>
-                            </div>
-                        </div>
-                        <div class='form-items'>
-                            <div>
-                                <input class='form-input login-btn' type='submit' value="LOGIN">
-                            </div>
-                        </div>
-                        <p><?php echo $message; ?></p>
-                        <input type="hidden" name="login" value="1">
-                    </form>
-                </section>
-                <section class='activity'>
-                    <h3 class='activity-title'>Sign In</h3>
-                    <p>Complete the registration process to enjoy our destinations.</p>
-                    <form method="post" action="forms.php">
-                        <div class='form-items'>
-                            <div>
-                                <label class='form-label destination-extra' for='fullname'>Fullname</label>
-                            </div>
-                            <div>
-                                <input id='fullname' class='form-input' type='text' name='fullname'>
-                            </div>
-                        </div>
-                        <div class='form-items'>
-                            <div>
-                                <label class='form-label destination-extra' for='email'>Email Address</label>
-                            </div>
-                            <div>
-                                <input id='email' class='form-input' type='text' name='email'>
-                            </div>
-                        </div>
-                        <div class='form-items'>
-                            <div>
-                                <label class='form-label destination-extra' for='username'>Username</label>
-                            </div>
-                            <div>
-                                <input id='username' class='form-input' type='text' name='username'>
-                            </div>
-                        </div>
-                        <div class='form-items'>
-                            <div>
-                                <label class='form-label destination-extra' for='password'>Password</label>
-                            </div>
-                            <div>
-                                <input id='password' class='form-input' type='password' name='password'>
-                            </div>
-                        </div>
-                        <div class='form-items'>
-                            <div>
-                                <input class='form-input login-btn' type='submit' value="REGISTER">
-                            </div>
-                        </div>
-                        <p><?php echo $message; ?></p>
-                        <input type="hidden" name="register" value="1">
-                    </form>
-                </section>
+        <div class='form-text'>
+        <section class='register'>
+                <h3 class='title-login'>Sign In</h3>
+                
+                <form method="post" action="forms.php">
+                    <div class='register-text'>
+                        <label for='fullname'>Fullname:</label>
+                        <input id='fullname' class='form-input' type='text' name='fullname'>
+                    </div>
+                    <div class='register-text'>
+                        <label for='email'>Email Address:</label>
+                        <input id='email' class='form-input' type='text' name='email'>
+                    </div>
+                    <div class='register-text'>
+                        <label for='username'>Username:</label>
+                        <input id='username' class='form-input' type='text' name='username'>
+                    </div>
+                    <div class='register-text'>
+                        <label for='password'>Password:</label>
+                        <input id='password' class='form-input' type='password' name='password'>
+                    </div>
+                    <div class='register-btn-text'>
+                        <input class='register-btn' type='submit' value="REGISTER">
+                    </div>
+                    <p class='form-text register-text'><?php echo $message; ?></p>
+                    <input type="hidden" name="register" value="1">
+                </form>
+            </section>
                 
                 
                 
             </div>
-
-        </section>
+            </div>
+            </section> 
+       
 </main>
 <?php 
         include './parts/footer.php';

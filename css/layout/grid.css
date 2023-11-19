@@ -90,6 +90,31 @@
     margin-left: 2.5rem;
 }
 
+.account-container{
+    display: grid;
+    width: 80vw;
+    margin: 2rem auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;;
+    
+}
+
+.login{
+    display: grid;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 2.3rem 2.5rem;
+    border: 3px solid var(--clr-black);
+}
+
+.register{
+    display: grid;
+    border-radius: 2rem;
+    text-align: center;
+    border: 3px solid var(--clr-black);
+    padding: 2rem 2.1rem;
+}
+
 @media (max-width: 767.98px) {
     .cta-container {
         background-position: left;

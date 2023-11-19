@@ -4,7 +4,7 @@
 
      // Reference: https://medoo.in/api/select
      $categories = $database->select("tb_categories","*");
-
+     $outstanding = $database->select("tb_outstanding","*");
      $message = "";
 
      if($_GET){
@@ -39,8 +39,8 @@
                 $filename = str_replace(',', '', $filename);
                 $filename = str_replace('.', '', $filename);
                 $filename = str_replace(' ', '-', $filename);
-                $img = "dish-".$filename.".".$file_ext;
-                move_uploaded_file($file_tmp, "../scraping/images".$img);
+                $img = "dish- ".$filename.".".$file_ext;
+                move_uploaded_file($file_tmp, "../scraping/images/".$img);
 
                
             }
@@ -56,6 +56,14 @@
                         break;
                     }
                 }
+
+                $outstanding_name = "";
+                foreach ($outstanding as $value) {
+                    if ($value["id_outstanding"] == $_POST["outstanding"]) {
+                        $outstanding_name = $value["value_outstanding"];
+                        break;
+                    }
+                }
         
         $database->update("tb_dishes",[
             "id_categoria"=>$_POST["categoria"],
@@ -65,7 +73,8 @@
             "imagen"=> $img,
             "precio"=>$_POST["precio"],
             "personas"=>$_POST["personas"],
-            "destacado"=>$_POST["destacado"]
+            "value_outstanding"=>$outstanding_name,
+            "id_outstanding"=>$_POST["outstanding"],
         ],[
             "id_informacion_platillo" => $_POST["id"]
         ]);
@@ -129,12 +138,23 @@
                 <input id="precio" class="textfield" name="precio" type="text" value="<?php echo $item[0]["precio"] ?>">
             </div>
             <div class="form-items">
-                <label for="destacado">Outstanding</label>
-                <input id="destacado" class="textfield" name="destacado" type="text" value="<?php echo $item[0]["destacado"] ?>">
+                <label for="outstanding">Outstanding</label>
+                <select name="outstanding" id="outstanding">
+                    <?php 
+                        foreach($outstanding as $value){
+                            if($item[0]["id_outstanding"] == $value["id_outstanding"]){
+                                echo "<option value='".$value["id_outstanding"]."' selected>".$value["value_outstanding"]."</option>";
+                            }else{
+                                echo "<option value='".$value["id_outstanding"]."'>".$value["value_outstanding"]."</option>";
+                            }
+                        }
+                    ?>
+                </select>
+                <input type="hidden" name="value_outstanding" value="">
             </div>
             <input type="hidden" name="id" value="<?php echo $item[0]["id_informacion_platillo"]; ?>">
             <div class="form-items">
-                <input class="submit-btn" type="submit" value="Update Destination">
+                <input class="submit-btn" type="submit" value="Update Dish">
             </div>
         </form>
     </div>

@@ -158,6 +158,21 @@
     border-top: 10px solid hsl(0, 88%, 58%);
 }
 
+.register-btn{
+    border-radius: 1rem;
+    background: var(--clr-red);
+    width: 35%;
+    height: 1.3rem;
+    margin-top: 1rem;
+}
+.login-btn{
+    border-radius: 1rem;
+    background: var(--clr-red);
+    width: 35%;
+    height: 1.3rem;
+    margin-top: 3rem;
+}
+
 @media (max-width: 767.98px) {
     .log-nav {
         display: none;

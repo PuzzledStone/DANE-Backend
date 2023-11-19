@@ -16,6 +16,7 @@
               "tb_dishes.precio",
               "tb_dishes.nombre_categoria",
               "tb_dishes.personas",
+              "tb_dishes.value_outstanding",
           
           ],[
               "id_informacion_platillo"=>$_GET["id"]
@@ -59,6 +60,7 @@
             <div class='second-container'>
                 <p class='text-details'>".$item[0]["descripcion"]."</p>
                 <p class='text-details'>".$item[0]["nombre_categoria"]."</p>
+                <p class='text-details'>".$item[0]["value_outstanding"]."</p>
                 <p class='text-details'> Designed for ".$item[0]["personas"]." person/s</p>
                 <p class='text-details'>".$item[0]["precio"]." $    </p>
             </div>

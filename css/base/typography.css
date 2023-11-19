@@ -65,7 +65,7 @@
 .footer-text {
     font-family: var(--ff-main);
     font-size: var(--fs-xs);
-    color: var(--clr-gray);
+    color: var(--clr-white);
     text-align: center;
 }
 
@@ -76,10 +76,32 @@
 .text-details {
     margin-top: 1rem;
     margin-left: 3rem;
-   
     font-size: var(--fs-sm);
     font-family: var(--ff-main);
     width: 80%;
+}
+
+.form-text{
+    text-align: center;
+    font-size: var(--fs-sm);
+    font-family: var(--ff-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-black);
+}
+
+.login-text{
+    margin-top: 1.5rem;
+}
+
+.register-text{
+    margin-top: 1.1rem;
+    text-align: left;
+}
+.register-btn-text{
+    margin-top: 1.1rem;
 }
 
 .text-details-two {
@@ -93,9 +115,7 @@
     font-size: var(--fs-sm);
     font-family: var(--ff-main);
     margin-top: .6rem;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
 
 .category-page{
@@ -119,6 +139,12 @@
     font-family: var(--ff-main);
     margin-top: 1.5rem;
     text-align: center;
+}
+
+.title-login{
+    font-size: var(--fs-md);
+    font-family: var(--ff-main); 
+    text-align: center; 
 }
 
 

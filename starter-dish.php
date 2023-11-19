@@ -41,7 +41,7 @@
                        <p class='featured-details-txt' style= font-size:0.75rem><b>Details</b></p>
                        <p class='featured-details-txt'>".$item["personas"]." person/s</p>
                        <p class='featured-details-txt'>".$item["precio"]." $</p>
-                       <p class='featured-details-txt'>Related dishes:</p>
+                       <p class='featured-details-txt'>".$item["value_outstanding"]."</p>
                        <p class='featured-details-txt'>".$item["nombre_categoria"]."</p>
                        <span class='white-line'></span>
                        <a href='details.php?id=".$item["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>

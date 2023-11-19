@@ -3,7 +3,7 @@
     
     include('simple_html_dom.php');
 
-    $link = "https://www.allrecipes.com/recipes/700/world-cuisine/asian/korean/";
+    $link = "https://www.allrecipes.com/recipes/77/drinks/";
 
     $filenames = [];
     $menu_item_names = [];
@@ -84,6 +84,6 @@
         ]);
     }
     
-    // note: the administrator will need to edit some names so that they can be placed correctly in the spaces: 14 characters maximum
-
+    // the administrator will need to edit some names so that they can be placed correctly in the spaces: 14 characters maximum
+    // The info wont apear in the web page if they are not complete, admin will have to complete the info in the edit.php 
 ?>

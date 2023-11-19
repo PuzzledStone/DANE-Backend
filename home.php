@@ -45,7 +45,7 @@
                     <p class='featured-details-txt'style= font-size:0.75rem><b>Details</b></p>
                     <p class='featured-details-txt'>Size: ".$items[$i]["personas"]." person/s</p>
                     <p class='featured-details-txt'>".$items[$i]["precio"]." $</p>
-                    <p class='featured-details-txt'>Related dishes:</p>
+                    <p class='featured-details-txt'>".$items[$i]["value_outstanding"]."</p>
                     <p class='featured-details-txt'>".$items[$i]["nombre_categoria"]."</p>
                     <span class='white-line'></span>
                     <a href='details.php?id=".$items[$i]["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>
@@ -65,7 +65,7 @@
             <?php
             
             echo "<section class='most-voting-container'>
-            <h1 class='voting-title'>Featured dishes</h1>
+            <h1 class='voting-title'>Menu</h1>
             <div class='featured-container'>";
             for ($i = 0; $i < 9; $i++) {  
                 $name = $items[$i]["nombre"];
@@ -79,7 +79,7 @@
                         <p class='featured-details-txt' style= font-size:0.75rem><b>Details</b></p>
                         <p class='featured-details-txt'>".$items[$i]["personas"]." person/s</p>
                         <p class='featured-details-txt'>".$items[$i]["precio"]." $</p>
-                        <p class='featured-details-txt'>Related dishes:</p>
+                        <p class='featured-details-txt'>".$items[$i]["value_outstanding"]."</p>
                         <p class='featured-details-txt'>".$items[$i]["nombre_categoria"]."</p>
                         <span class='white-line'></span>
                         <a href='details.php?id=".$items[$i]["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>
