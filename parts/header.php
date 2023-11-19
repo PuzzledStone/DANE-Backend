@@ -6,7 +6,7 @@
             </label>
             <a href="home.php"><img class="logo-nav" src="imgs/icons/logo.png" alt="logo"></a>
             <a href="forms.php"><img class="log-nav" src="imgs/icons/log-out.png" alt="log"></a>
-            <a href="#"><img class="register-nav" src="imgs/icons/register.png" alt="register"></a>
+            <a href="order.php"><img class="register-nav" src="imgs/icons/register.png" alt="register"></a>
             <ul class="nav-list">
                 <li><a class="nav-list-link" href="categories.php">Categories</a></li>
                 <li><a class="nav-list-link" href="home.php">Home</a></li>
