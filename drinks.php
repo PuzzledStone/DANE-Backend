@@ -32,7 +32,7 @@
            <div class='featured-container'>";
            foreach($items as $item) {  
                $name = $item["nombre"];
-               $limitedName = (strlen($name) > 13) ? substr($name, 0, 13) : $name;
+               $limitedName = (strlen($name) > 25) ? substr($name, 0, 25) : $name;
            echo "<section class='recepie'>
                    <div>
                        <h1 class='featured-title'>".$limitedName."</h1>
@@ -42,7 +42,7 @@
                        <p class='featured-details-txt' style= font-size:0.75rem><b>Details</b></p>
                        <p class='featured-details-txt'>".$item["personas"]." person/s</p>
                        <p class='featured-details-txt'>".$item["precio"]." $</p>
-                       <p class='featured-details-txt'>".$items[$i]["value_outstanding"]."</p>
+                       <p class='featured-details-txt'>".$item["value_outstanding"]."</p>
                        <p class='featured-details-txt'>".$item["nombre_categoria"]."</p>
                        <span class='white-line'></span>
                        <a href='details.php?id=".$item["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>

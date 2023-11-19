@@ -2,6 +2,10 @@
     require_once './database.php';
     // Reference: https://medoo.in/api/select
     $items = $database->select("tb_dishes","*");
+
+    $outstanding = $database->select("tb_dishes","*",[
+        "id_outstanding"=>1 
+     ]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,21 +38,22 @@
               
               echo"<div class='voted-recipes-container'>";
               for ($i = 0; $i < 2; $i++) { 
-                $name = $items[$i]["nombre"];
-                $limitedName = (strlen($name) > 20) ? substr($name, 0, 20) : $name; 
+               
+                $name = $outstanding[$i]["nombre"];
+                $limitedName = (strlen($name) > 30) ? substr($name, 0, 30) : $name; 
                 echo "<section class='recepie'>
                 <div>
                     <h1 class='featured-title'>".$limitedName."</h1>
-                    <img class='featured-img' src='scraping/images/".$items[$i]["imagen"]."' alt='bibimbap'>
+                    <img class='featured-img' src='scraping/images/".$outstanding[$i]["imagen"]."' alt='bibimbap'>
                 </div>
                 <div class='red-box'>
                     <p class='featured-details-txt'style= font-size:0.75rem><b>Details</b></p>
-                    <p class='featured-details-txt'>Size: ".$items[$i]["personas"]." person/s</p>
-                    <p class='featured-details-txt'>".$items[$i]["precio"]." $</p>
-                    <p class='featured-details-txt'>".$items[$i]["value_outstanding"]."</p>
-                    <p class='featured-details-txt'>".$items[$i]["nombre_categoria"]."</p>
+                    <p class='featured-details-txt'>Size: ".$outstanding[$i]["personas"]." person/s</p>
+                    <p class='featured-details-txt'>".$outstanding[$i]["precio"]." $</p>
+                    <p class='featured-details-txt'>".$outstanding[$i]["value_outstanding"]."</p>
+                    <p class='featured-details-txt'>".$outstanding[$i]["nombre_categoria"]."</p>
                     <span class='white-line'></span>
-                    <a href='details.php?id=".$items[$i]["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>
+                    <a href='details.php?id=".$outstanding[$i]["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>
                     <button class='featured-like-btn'> <img class='like-img' src='imgs/icons/heart.png' alt='like-btn'></button>
                 </div>
             </section>";
@@ -69,7 +74,7 @@
             <div class='featured-container'>";
             for ($i = 0; $i < 9; $i++) {  
                 $name = $items[$i]["nombre"];
-                $limitedName = (strlen($name) > 13) ? substr($name, 0, 13) : $name;
+                $limitedName = (strlen($name) > 25) ? substr($name, 0, 25) : $name;
             echo "<section class='recepie'>
                     <div>
                         <h1 class='featured-title'>".$limitedName."</h1>

@@ -113,7 +113,7 @@
     font-weight: var(--fw-regular);
     border: none;
     background-color: transparent;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: 100%;
     cursor: pointer;
 }
@@ -166,7 +166,7 @@
     height: 1.3rem;
     margin-top: 1rem;
     border: none;
-    
+
 }
 .login-btn{
     border-radius: 1rem;

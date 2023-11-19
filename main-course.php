@@ -32,7 +32,7 @@
            <div class='featured-container'>";
            foreach($items as $item) {  
                $name = $item["nombre"];
-               $limitedName = (strlen($name) > 13) ? substr($name, 0, 13) : $name;
+               $limitedName = (strlen($name) > 25) ? substr($name, 0, 25) : $name;
            echo "<section class='recepie'>
                    <div>
                        <h1 class='featured-title'>".$limitedName."</h1>
