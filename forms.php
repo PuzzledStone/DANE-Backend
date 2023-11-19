@@ -92,7 +92,7 @@
                         <input stylesheet='margin-bottom:1rem' id='password' type='password' name='password'>
                     </div>
                     <div class='login-text'>
-                        <input class='login-btn' type='submit' value="LOGIN">
+                        <input class='login-btn btns-text' type='submit' value="LOGIN">
                     </div>
                     <p class='form-text login-text'><?php echo $message; ?></p>
                     <input type="hidden" name="login" value="1">
@@ -122,7 +122,7 @@
                         <input id='password' class='form-input' type='password' name='password'>
                     </div>
                     <div class='register-btn-text'>
-                        <input class='register-btn' type='submit' value="REGISTER">
+                        <input class='register-btn btns-text' type='submit' value="REGISTER">
                     </div>
                     <p class='form-text register-text'><?php echo $message; ?></p>
                     <input type="hidden" name="register" value="1">

@@ -28,7 +28,7 @@
 
     <?php 
             echo "<section class='most-voting-container'>
-            <h1 class='voting-title'>Featured Dishes</h1>
+            <h1 class='voting-title'>Outstanding</h1>
             <div class='featured-container'>";
             foreach($items as $item) {  
                 $name = $item["nombre"];

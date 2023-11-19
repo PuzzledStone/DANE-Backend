@@ -59,7 +59,15 @@
     text-align: center;
     margin-top: 1.3rem;
     font-weight: var(--fw-regular);
+}
 
+.btns-text{
+    font-family: var(--ff-main);
+    font-size: var(--fs-xs);
+    color: var(--clr-white);
+    text-align: center;
+    text-decoration: none;
+    font-weight: var(--fw-regular);
 }
 
 .footer-text {
@@ -102,6 +110,11 @@
 }
 .register-btn-text{
     margin-top: 1.1rem;
+    color: var(--clr-white);
+}
+
+.btn-txt{
+
 }
 
 .text-details-two {

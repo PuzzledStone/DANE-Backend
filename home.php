@@ -94,6 +94,13 @@
 
         </section>
 
+            <div>
+                
+                    <button class="hardpl-btn" >
+                        <a href="categories.php" class= "btns-text"> Show More</a>
+                    </button>
+                
+            </div>
 
     </main>
     

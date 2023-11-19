@@ -53,13 +53,14 @@
 
 .hardpl-btn {
     background-color: var(--clr-red);
-    margin-top: 1rem;
-    margin-left: 17rem;
-    border-top-right-radius: 2rem;
-    border-top-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    width: 15%;
+    border-radius: 2rem;
+    border: none;
+    margin: auto;
+    width: 14%;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .white-line {
@@ -164,6 +165,8 @@
     width: 35%;
     height: 1.3rem;
     margin-top: 1rem;
+    border: none;
+    
 }
 .login-btn{
     border-radius: 1rem;
@@ -171,6 +174,7 @@
     width: 35%;
     height: 1.3rem;
     margin-top: 3rem;
+    border: none;
 }
 
 @media (max-width: 767.98px) {
