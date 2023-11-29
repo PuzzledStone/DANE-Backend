@@ -77,10 +77,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Dishes</title>
     <link rel="stylesheet" href="../css/themes/admin.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
+<header>
+    <?php include '../parts/header-admin.php';?>
+    <div class="line"></div>
+</header>
 <body>
     <div class="container">
-        <h2>Add New Dish</h2>
+        <h2 class="title-admin">Add New Dish</h2>
         <?php 
             echo $message;
         ?>
@@ -154,6 +159,8 @@
         }
         
     </script>
-    
+    <footer>
+        <?php include '../parts/footer.php';?>
+    </footer>
 </body>
 </html>

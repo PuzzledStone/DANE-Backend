@@ -5,6 +5,7 @@ body{
 .container{
     display: grid;
     width: 15rem;
+    margin: auto;
 }
 
 .form-items{
@@ -64,4 +65,9 @@ thead{
 
 td{
     padding: .7rem;
+}
+
+.title-admin{
+    margin: auto;
+    margin-top: 1.5rem;
 }

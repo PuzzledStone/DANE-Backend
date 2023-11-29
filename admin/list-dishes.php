@@ -9,9 +9,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registered Dishes</title>
+    <link rel="stylesheet" href="../css/themes/admin.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <h2>Registered Dishes</h2>
+<header>
+    <?php include '../parts/header-admin.php';?>
+    <div class="line"></div>
+</header>
+    <div class="container">
+    <h2 class="title-admin">Registered Dishes</h2>
     <table>
         <?php
             foreach($items as $item){
@@ -22,6 +29,9 @@
             }
         ?>
     </table>
-    
+    </div>
+    <footer>
+        <?php include '../parts/footer.php';?>
+    </footer>
 </body>
 </html>

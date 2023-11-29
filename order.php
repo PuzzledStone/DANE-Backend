@@ -7,7 +7,7 @@
        
         // Reference: https://medoo.in/api/select
         // Note: don't delete the [>] 
-        $item = $database->select("tb_destinations",[
+        $item = $database->select("tb_dishes",[
             "[>]tb_us_states"=>["id_us_state" => "id_us_state"],
             "[>]tb_camping_categories"=>["id_camping_category" => "id_camping_category"]
         ],[
