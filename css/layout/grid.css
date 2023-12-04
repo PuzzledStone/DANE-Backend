@@ -106,7 +106,22 @@
     padding: 2.3rem 2.5rem;
     border: 3px solid var(--clr-black);
 }
-
+.confirmation{
+    display: grid;
+    border-radius: 2rem;
+    text-align: center;
+    border: 3px solid var(--clr-black);
+    width: 50%;
+    margin: auto;
+    margin-top: 1rem;
+}
+.form-items{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    margin: .5rem 0;
+    align-items: center;
+}
 .register{
     display: grid;
     border-radius: 2rem;
@@ -114,7 +129,13 @@
     border: 3px solid var(--clr-black);
     padding: 2rem 2.1rem;
 }
-
+.destinations-container{
+    text-align: center;
+}
+.activity{
+    display: grid;
+    text-align: center;
+}
 @media (max-width: 767.98px) {
     .cta-container {
         background-position: left;

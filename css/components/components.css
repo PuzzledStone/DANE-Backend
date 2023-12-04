@@ -177,6 +177,10 @@
     border: none;
 }
 
+.form-input{
+    width: 30%;
+}
+
 @media (max-width: 767.98px) {
     .log-nav {
         display: none;

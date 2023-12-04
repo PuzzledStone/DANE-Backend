@@ -1,40 +1,29 @@
-
 <?php
-    require_once './database.php';
-    $message = "";
+require_once './database.php';
+$message = "";
 
-    if($_POST){
+if ($_POST) {
+    if (isset($_POST["login"])) {
+        $user = $database->select("tb_users", "*", [
+            "usr" => $_POST["username"]
+        ]);
 
-        if(isset($_POST["login"])){
-
-            $user = $database->select("tb_users","*",[
-                "usr"=> $_POST["username"]
-            ]);
-
-            if(count($user) > 0){
-                //validate password
-                if(password_verify($_POST["password"], $user[0]["pwd"])){
-                    session_start();
-                    $_SESSION["isLoggedIn"] = true;
-                    $_SESSION["fullname"] = $user[0]["fullname"];
-                    header("location: home.php");
-                }else{
-                    $message = "wrong username or password";
-                }
-            }else{
-                $message = "wrong username or password";
+        if (count($user) > 0) {
+            // Validate password
+            if (password_verify($_POST["password"], $user[0]["pwd"])) {
+                session_start();
+                $_SESSION["isLoggedIn"] = true;
+                header("location: home.php");
+               
+                exit(); // Ensure that no further code is executed after the redirect
+            } else {
+                $message = "Wrong username or password";
             }
-
-            //validate if user already logged in
-            
-            //if(isset($_SESSION["isLoggedIn"])){
-                //header("location: book.php?id=".$_POST["login"]);
-            //}else{
-                //validate login
-                //echo "validate login: ".$_POST["login"];
-            //}
+        } else {
+            $message = "Wrong username or password";
         }
-
+    }
+    var_dump($_SESSION);
         if(isset($_POST["register"])){
             //validate if user already registered
             $validateUsername = $database->select("tb_users","*",[
@@ -54,7 +43,6 @@
                     "email"=> $_POST["email"]
                 ]);
 
-                //header("location: book.php?id=".$_POST["register"]);
             }
         }
     }
@@ -66,6 +54,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;700&family=Open+Sans:ital,wght@0,500;0,700;1,300&family=Raleway:ital,wght@0,500;0,700;1,300&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
