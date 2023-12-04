@@ -2,6 +2,7 @@
 require_once './database.php';
 
 $details = [];
+$totalOrderCost = 0;
 
 if ($_POST && isset($_POST['extras'])) {
     $extras = $_POST['extras'];
@@ -30,6 +31,16 @@ if ($_POST && isset($_POST['extras'])) {
         }
     }
 }
+if($_POST){
+if (isset($_POST['complete_order'])) {
+    $database->insert("tb_order_register",[
+        "id_registro_pedido"=>null,
+        "nombre_platillo"=>$dishDetails['dish_name'],
+        "cantidad_pedida"=> $dishDetails['dish_quantity'],
+        "total"=>$totalOrderCost,
+    ]); 
+}
+}
 
 ?>
 
@@ -52,22 +63,38 @@ if ($_POST && isset($_POST['extras'])) {
     </header>
     <main>
     <div class="line"></div>
-        <section class="confirmation">
-            <h2 class="featured-title">Order details</h2>
-                <?php foreach ($details as $dishDetails) : ?>
-                    
-                        <h3 class='featured-title'><?= $dishDetails["dish_name"] ?></h3>
-                        <p class='text-details'>Quantity: <?= $dishDetails["dish_quantity"] ?></p>
-                        <p class='text-details'>Price per unit: $<?= $dishDetails["dish_price"] ?></p>
-                        <p class='text-details'>Total cost: $<?= $dishDetails["dish_total"] ?></p>
-                    
-                <?php endforeach; ?>
+       
+            <h2 class="confirmation-title">Order details</h2>
+                
+            <?php 
+            foreach ($details as $dishDetails) {
+                echo "<h3 class='dish-con-title'>" . $dishDetails['dish_name'] . "</h3>";
+                echo "<p class='confirmation-details'>Quantity: " . $dishDetails['dish_quantity'] . "</p>";
+                echo "<p class='confirmation-details'>Price per unit: $" . $dishDetails['dish_price'] . "</p>";
+                echo "<hr>";
+                $totalOrderCost += $dishDetails['dish_total'];    
+            }   
+            
+            echo "<p class='dish-con-title'> Total: $totalOrderCost $</p>";
 
-            <button class="hardpl-btn" type="submit">
-                    <span class="btns-text">Complete Order</span>
-                </button>
-        </section>
+            ?>
+
+                
+    <form action='confirmation.php' method='post'>
+        <button class="hardpl-btn" type="submit" id="complete_order">
+            <span class="btns-text">Complete Order</span>
+            </button>
+            </form>   
     </main>
     <?php include "./parts/footer.php"; ?>
 </body>
+
+<script>
+
+     function insertBuy(){
+        // Reference: https://medoo.in/api/insert
+        
+     }
+
+</script>
 </html>
