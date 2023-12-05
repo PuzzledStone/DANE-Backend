@@ -14,8 +14,7 @@ if ($_POST) {
                 session_start();
                 $_SESSION["isLoggedIn"] = true;
                 header("location: home.php");
-               
-                exit(); // Ensure that no further code is executed after the redirect
+         
             } else {
                 $message = "Wrong username or password";
             }

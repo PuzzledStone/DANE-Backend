@@ -17,11 +17,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <!-- google fonts -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -29,8 +24,6 @@
         include "./parts/header.php";
     ?>
     <main>
-       
-        <!-- destinations -->
         
             <?php
                 if(count($items) > 0){
