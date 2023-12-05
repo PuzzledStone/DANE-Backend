@@ -109,7 +109,38 @@
     ?>
 
     <!-- most voted -->
-  
+   <?php 
+              echo "<section class='most-voting-container'>";
+              echo "<h1 class='voting-title'>The most voted</h1>";
+              
+              echo"<div class='voted-recipes-container'>";
+              for ($i = 0; $i < 2; $i++) { 
+               
+                $name = $outstanding[$i]["nombre"];
+                $limitedName = (strlen($name) > 30) ? substr($name, 0, 30) : $name; 
+                echo "<section class='recepie'>
+                <div>
+                    <h1 class='featured-title'>".$limitedName."</h1>
+                    <img class='featured-img' src='scraping/images/".$outstanding[$i]["imagen"]."' alt='bibimbap'>
+                </div>
+                <div class='red-box'>
+                    <p class='featured-details-txt'style= font-size:0.75rem><b>Details</b></p>
+                    <p class='featured-details-txt'>Size: ".$outstanding[$i]["personas"]." person/s</p>
+                    <p class='featured-details-txt'>".$outstanding[$i]["precio"]." $</p>
+                    <p class='featured-details-txt'>".$outstanding[$i]["value_outstanding"]."</p>
+                    <p class='featured-details-txt'>".$outstanding[$i]["nombre_categoria"]."</p>
+                    <span class='white-line'></span>
+                    <a href='details.php?id=".$outstanding[$i]["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>
+                    <button class='featured-like-btn'> <img class='like-img' src='imgs/icons/heart.png' alt='like-btn'></button>
+                </div>
+            </section>";
+              }
+              echo"</div>";
+          echo "</section>"; 
+            ?>
+            <button class="hardpl-btn" >
+                        <a href="order.php" class= "btns-text"> Order Now</a>
+                    </button>
     <?php 
         include './parts/footer.php';
     ?>
