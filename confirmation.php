@@ -86,7 +86,9 @@ if (isset($_POST['complete_order'])) {
             </button>
             </form>   
     </main>
+    <footer>
     <?php include "./parts/footer.php"; ?>
+    </footer>
 </body>
 
 <script>
