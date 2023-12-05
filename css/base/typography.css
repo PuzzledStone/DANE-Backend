@@ -15,6 +15,11 @@
 
 }
 
+.search-txt{
+    font-family: var(--ff-main);
+    font-size: var(--fs-sm);
+}
+
 .featured-txt {
     color: var(--clr-black);
     font-family: var(--ff-main);

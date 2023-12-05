@@ -31,16 +31,7 @@ if ($_POST && isset($_POST['extras'])) {
         }
     }
 }
-if($_POST){
-if (isset($_POST['complete_order'])) {
-    $database->insert("tb_order_register",[
-        "id_registro_pedido"=>null,
-        "nombre_platillo"=>$dishDetails['dish_name'],
-        "cantidad_pedida"=> $dishDetails['dish_quantity'],
-        "total"=>$totalOrderCost,
-    ]); 
-}
-}
+
 
 ?>
 
@@ -82,7 +73,7 @@ if (isset($_POST['complete_order'])) {
                 
     <form action='confirmation.php' method='post'>
         <button class="hardpl-btn" type="submit" id="complete_order">
-            <span class="btns-text">Complete Order</span>
+            <a href="home.php" class="btns-text">Go Home</a>
             </button>
             </form>   
     </main>
@@ -91,12 +82,4 @@ if (isset($_POST['complete_order'])) {
     </footer>
 </body>
 
-<script>
-
-     function insertBuy(){
-        // Reference: https://medoo.in/api/insert
-        
-     }
-
-</script>
 </html>

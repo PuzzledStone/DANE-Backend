@@ -52,7 +52,14 @@
    echo "</div>";
    echo"</section>";    
         ?>
+    <section class="search-container">
+                    <form method="get" action="results.php">
+                            <label for="search-txt" class="search-txt">Search</label>
+                            <input id="search" class="search" type="text" name="keyword">  
+                            <input type="submit" class="search-btn" value="SEARCH DESTINATION">  
+                    </form>
 
+                   </section>
     </main>
     <?php 
         include './parts/footer.php';

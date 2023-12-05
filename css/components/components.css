@@ -181,6 +181,23 @@
     width: 30%;
 }
 
+.lenguage-btn{
+   position: absolute;
+   background: var(--clr-red);
+   text-decoration: none;
+   font-family: var(--ff-main); 
+   color: var(--clr-white);
+   padding: .3rem;
+
+}
+
+.search-btn{
+    background-color: var(--clr-red);
+    border-radius: 1.5rem;
+    border: none;
+    height: 1rem;
+}
+
 @media (max-width: 767.98px) {
     .log-nav {
         display: none;

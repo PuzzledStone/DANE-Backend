@@ -3,9 +3,14 @@
 
   $link = "";
   $url_params = "";
+  $lang = "";
 
+  $outstanding = $database->select("tb_dishes","*",[
+    "id_outstanding"=>1 
+ ]);
 
   if($_GET){
+    if(isset($_GET["lang"]) && $_GET["lang"] == "tr"){
           $item = $database->select("tb_dishes",[
               "[>]tb_categories"=>["id_categoria" => "id_categoria"]
           ],[
@@ -17,12 +22,40 @@
               "tb_dishes.nombre_categoria",
               "tb_dishes.personas",
               "tb_dishes.value_outstanding",
+              "tb_dishes.nombre_kr",
+              "tb_dishes.descripcion_kr",
+
           
           ],[
               "id_informacion_platillo"=>$_GET["id"]
           ]);
-          
+          $item[0]["nombre"] = $item[0]["nombre_kr"];
+          $item[0]["descripcion"] = $item[0]["descripcion_kr"];
+
           $url_params = "id=".$item[0]["id_informacion_platillo"];
+          $lang = "EN";
+        
+        }else{
+            $item = $database->select("tb_dishes",[
+                "[>]tb_categories"=>["id_categoria" => "id_categoria"]
+            ],[
+                "tb_dishes.id_informacion_platillo",
+                "tb_dishes.nombre",
+                "tb_dishes.descripcion",
+                "tb_dishes.imagen",
+                "tb_dishes.precio",
+                "tb_dishes.nombre_categoria",
+                "tb_dishes.personas",
+                "tb_dishes.value_outstanding",
+            
+            ],[
+                "id_informacion_platillo"=>$_GET["id"]
+            ]);
+            
+            $url_params = "id=".$item[0]["id_informacion_platillo"]."&lang=tr";
+            $lang = "KR";
+        }
+          
      
   }
     
@@ -56,6 +89,7 @@
         
         <img class='img-details realce' src='scraping/images/".$item[0]["imagen"]."' alt='logo'>
             <div>
+             <a class='lenguage-btn' href='./details.php?".$url_params."'>".$lang."</a>
             <h1 class='title-container'>".$item[0]["nombre"]."</h1>
             <div class='second-container'>
                 <p class='text-details'>".$item[0]["descripcion"]."</p>
@@ -75,44 +109,7 @@
     ?>
 
     <!-- most voted -->
-    <section class="most-voting-container">
-        <div class="voted-recipes-container">
-            <section class="recepie">
-                <div>
-                    <h1 class="featured-title">Bibimbap</h1>
-                    <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                </div>
-                <div class="red-box">
-                    <p class="featured-details-txt">Details</p>
-                    <p class="featured-details-txt">Size: Individual</p>
-                    <p class="featured-details-txt">Price: 50$</p>
-                    <p class="featured-details-txt">Related dishes:</p>
-                    <p class="featured-details-txt">Category: strong dish</p>
-                    <span class="white-line"></span>
-                    <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                    <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                            alt="like-btn"></button>
-                </div>
-            </section>
-            <div class="recepie">
-                <div>
-                    <h1 class="featured-title">Bibimbap</h1>
-                    <img class="featured-img" src="imgs/recepies/bibimbap.jpg" alt="bibimbap">
-                </div>
-                <div class="red-box">
-                    <p class="featured-details-txt">Details</p>
-                    <p class="featured-details-txt">Size: Individual</p>
-                    <p class="featured-details-txt">Price: 50$</p>
-                    <p class="featured-details-txt">Related dishes:</p>
-                    <p class="featured-details-txt">Category: strong dish</p>
-                    <span class="white-line"></span>
-                    <a href="details.html"><button class="featured-more-btn">View more</button></a>
-                    <button class="featured-like-btn"> <img class="like-img" src="imgs/icons/heart.png"
-                            alt="like-btn"></button>
-                </div>
-            </div>
-    </section>
-    </section>
+  
     <?php 
         include './parts/footer.php';
     ?>

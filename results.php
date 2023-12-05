@@ -1,34 +1,47 @@
-
-<?php 
+<?php
     require_once './database.php';
-
-    $items = $database->select("tb_dishes", "*", [
-        "id_categoria" => 3
-    ]);
    
+    $items = [];
+
+    if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
+        $keyword = $_GET['keyword'];
+        
+        $items = $database->select("tb_dishes", "*", [
+            "nombre[~]" => "%$keyword%",
+        ]);
+    }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drinks</title>
+    <title>Results</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- google fonts -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-<?php 
-        include './parts/header.php';
-   ?>
-
-     <main>
-
-     <div class="line"></div>
-
-        <?php 
+    <?php 
+        include "./parts/header.php";
+    ?>
+    <main>
+       
+        <!-- destinations -->
+        
+            <?php
+                if(count($items) > 0){
+                    echo "<p class='featured-title'>We found: ".count($items)." dish(es)</p>";
+                }else{
+                    echo "<p class='featured-title'>We found: ".count($items)." dish(es) with that name</p>";
+                }
+                
+            ?>
+             <?php 
            echo "<section class='most-voting-container'>
-           <h1 class='voting-title'>Main Course</h1>
            <div class='featured-container'>";
            foreach($items as $item) {  
                $name = $item["nombre"];
@@ -42,7 +55,7 @@
                        <p class='featured-details-txt' style= font-size:0.75rem><b>Details</b></p>
                        <p class='featured-details-txt'>".$item["personas"]." person/s</p>
                        <p class='featured-details-txt'>".$item["precio"]." $</p>
-                       <p class='featured-details-txt'>".$item["value_outstanding"]."</p>
+                       <p class='featured-details-txt'>Related dishes:</p>
                        <p class='featured-details-txt'>".$item["nombre_categoria"]."</p>
                        <span class='white-line'></span>
                        <a href='details.php?id=".$item["id_informacion_platillo"]."'><button class='featured-more-btn'>View more</button></a>
@@ -51,21 +64,16 @@
                </section>" ;
    }  
    echo "</div>";
-   echo"</section>";    
-        ?>
+   echo"</section>";   
+   echo "<button class='hardpl-btn'> <a href='categories.php' class='btns-text'> Go Back </a> </button>"; 
+   ?>
 
-<section class="search-container">
-                    <form method="get" action="results.php">
-                            <label for="search-txt" class="search-txt">Search</label>
-                            <input id="search" class="search" type="text" name="keyword">  
-                            <input type="submit" class="search-btn" value="SEARCH DESTINATION">  
-                    </form>
-
-                   </section>
 
     </main>
+
     <?php 
-        include './parts/footer.php';
+        include "./parts/footer.php"; 
     ?>
+
 </body>
 </html>

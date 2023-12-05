@@ -4,6 +4,7 @@ require_once './database.php';
 // Reference: https://medoo.in/api/select
 $dishes = $database->select("tb_dishes", "*");
 $dishCount = count($dishes);
+
 ?>
 
 <!DOCTYPE html>

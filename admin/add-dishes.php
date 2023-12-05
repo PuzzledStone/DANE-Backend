@@ -55,7 +55,9 @@
                     "id_categoria"=>$_POST["categoria"],
                     "nombre_categoria" => $category_name,
                     "nombre"=>$_POST["nombre"],
+                    "nombre_kr"=>$_POST["nombre_kr"],
                     "descripcion"=>$_POST["descripcion"],
+                    "descripcion_kr"=>$_POST["descripcion_kr"],
                     "imagen"=> $img,
                     "precio"=>$_POST["precio"],
                     "personas"=>$_POST["personas"],
@@ -94,6 +96,10 @@
                 <label for="nombre">Dish Name</label>
                 <input id="nombre" class="textfield" name="nombre" type="text">
             </div>
+            <div class="form-items">
+                <label for="nombre_kr">Korean Name</label>
+                <input id="nombre_kr" class="textfield" name="nombre_kr" type="text">
+            </div>
            
             <div class="form-items">
                 <label for="categoria">Dish Category</label>
@@ -113,6 +119,11 @@
             </div>
 
             <div class="form-items">
+                <label for="descripcion_kr">Korean Description</label>
+                <textarea id="descripcion_kr" name="descripcion_kr" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form-items img-admin">
                 <label for="imagen">Dish Image</label>
                 <img id="preview" src="../imgs/resources/destination-placeholder.webp" alt="Preview">
                 <input id="imagen" type="file" name="imagen" onchange="readURL(this)">

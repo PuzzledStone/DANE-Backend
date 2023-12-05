@@ -6,6 +6,10 @@
     $outstanding = $database->select("tb_dishes","*",[
         "id_outstanding"=>1 
      ]);
+    $url_params = "";
+    $lang = ""; 
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +37,7 @@
     <?php 
               echo "<section class='most-voting-container'>";
               echo "<h1 class='voting-title'>The most voted</h1>";
-              
+              echo "<a class='lenguage-btn' href='./home.php?".$url_params."'>".$lang."</a>";
               echo"<div class='voted-recipes-container'>";
               for ($i = 0; $i < 2; $i++) { 
                
