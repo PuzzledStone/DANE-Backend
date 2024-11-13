@@ -2,9 +2,6 @@
 
      require_once '../database.php';
 
-    
-
-     // Reference: https://medoo.in/api/select
      $categories = $database->select("tb_categories","*");
      $outstanding = $database->select("tb_outstanding","*");
      $message = "";
